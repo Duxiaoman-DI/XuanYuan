@@ -31,7 +31,7 @@ XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Par
 ### 3.2. 通用领域效果评测
 除了在金融领域的突出表现，轩辕2.0还在通用处理能力方面表现优秀。我们利用由200道多元化问题构成的通用评测集，对轩辕2.0在数学计算、场景写作、逻辑推理、文本摘要等13个主要维度的表现进行了评估，并将其与ChatGPT进行了对比。结果显示，轩辕2.0在这个评测集上，有71%的问题表现不亚于ChatGPT，验证了其全方面能力。
 
-![general](https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/0b508e06-425d-4826-a66d-32ce68a59904)
+![general](https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/cd3497a3-0193-4e78-9fcd-cdedda612b31)
 
 ## 4. 相关论文与引用
 
