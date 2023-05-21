@@ -7,7 +7,9 @@ XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Par
 ## 2. 模型下载
 为了方便用户使用，轩辕2.0模型将模型切分成多个文件。
 
-[模型下载](https://forms.gle/DfE61kAz9FVHqysb9)
+[模型申请](https://forms.gle/DfE61kAz9FVHqysb9)
+[模型下载](https://huggingface.co/xyz-nlp/XuanYuan2.0/tree/main)
+
 
 ## 3. 模型评测
 ### 3.1. 金融领域效果评测
