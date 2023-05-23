@@ -11,7 +11,8 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 ### 3.1. 金融领域效果评测
 为了深入评估轩辕对话大模型在金融领域的专业性，我们构建了一套针对金融领域的详细评测体系。该评测体系涉及金融名词理解、金融市场评论、金融数据分析和金融新闻理解等四大领域，从多角度全面考察模型的金融处理能力。评测结果表明，轩辕在主流的四种开源大模型的比较中，赢得了150次回答中63.33%的胜率，凸显出其在金融领域的显著优势。
 
-<img width="457" alt="f119d2cf76493fc383aef1e45" src="https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/82fca155-adea-4db1-9ea0-c6be0299ac46">
+<img width="457" alt="f119d2cf76493fc383aef1e45" src="https://github.com/Duxiaoman-DI/XuanYuan/assets/10808269/18ae1d5f-c9be-4813-8386-db6dc5f4896e">
+
 
 <details>
 <summary>点击显示轩辕回答示例</summary>
@@ -35,8 +36,7 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 ### 3.2. 通用领域效果评测
 除了在金融领域的突出表现，轩辕还在通用处理能力方面表现优秀。我们利用由200道多元化问题构成的通用评测集，对轩辕在数学计算、场景写作、逻辑推理、文本摘要等13个主要维度的表现进行了评估，并将其与ChatGPT进行了对比。结果显示，轩辕在这个评测集上，有71%的问题表现不亚于ChatGPT，验证了其全方面能力。
 
-<img width="481" alt="9038f05c34b82b3eae00603f6" src="https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/1a49c9e3-634f-4de7-8b08-faf686035d6a">
-
+<img width="481" alt="9038f05c34b82b3eae00603f6" src="https://github.com/Duxiaoman-DI/XuanYuan/assets/10808269/f85989c5-7e68-4fee-b9dc-39ef1c500c06">
 
 ## 4. 相关论文
 
