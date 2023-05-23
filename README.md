@@ -5,16 +5,16 @@ XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Par
 轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。轩辕在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调，它不仅可以应对通用领域的问题，也可以解答与金融相关的各类问题，为用户提供准确、全面的金融信息和建议。
 
 ## 2. 模型下载
-176B模型已可以在[Huggingface](https://huggingface.co/xyz-nlp/XuanYuan2.0)中申请下载。
+千亿级的轩辕模型已可以在[Huggingface](https://huggingface.co/xyz-nlp/XuanYuan2.0)中申请下载。
 
 ## 3. 模型评测
 ### 3.1. 金融领域效果评测
 为了深入评估轩辕对话大模型在金融领域的专业性，我们构建了一套针对金融领域的详细评测体系。该评测体系涉及金融名词理解、金融市场评论、金融数据分析和金融新闻理解等四大领域，从多角度全面考察模型的金融处理能力。评测结果表明，轩辕在主流的四种开源大模型的比较中，赢得了150次回答中63.33%的胜率，凸显出其在金融领域的显著优势。
 
-![financial](https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/9e041a8a-932e-492a-a34a-5468d91614c9)
+<img width="457" alt="f119d2cf76493fc383aef1e45" src="https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/82fca155-adea-4db1-9ea0-c6be0299ac46">
 
 <details>
-<summary>点击显示轩辕2.0回答示例</summary>
+<summary>点击显示轩辕回答示例</summary>
 
 | 问题 | 答案 |
 | --- | --- |
@@ -35,7 +35,8 @@ XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Par
 ### 3.2. 通用领域效果评测
 除了在金融领域的突出表现，轩辕还在通用处理能力方面表现优秀。我们利用由200道多元化问题构成的通用评测集，对轩辕在数学计算、场景写作、逻辑推理、文本摘要等13个主要维度的表现进行了评估，并将其与ChatGPT进行了对比。结果显示，轩辕在这个评测集上，有71%的问题表现不亚于ChatGPT，验证了其全方面能力。
 
-![general](https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/cd3497a3-0193-4e78-9fcd-cdedda612b31)
+<img width="481" alt="9038f05c34b82b3eae00603f6" src="https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/1a49c9e3-634f-4de7-8b08-faf686035d6a">
+
 
 ## 4. 相关论文与引用
 
@@ -45,7 +46,7 @@ XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Par
 
 [Self-QA: Unsupervised Knowledge Guided Language Model Alignment ](https://arxiv.org/abs/2305.11952)
 
-CGCE: A Chinese Generative Chat Evaluation Benchmark for General and Financial Domains
+[CGCE: A Chinese Generative Chat Evaluation Benchmark for General and Financial Domains](https://github.com/Duxiaoman-DI/Duxiaoman-learn/blob/main/CGCE.pdf)
 
 ## 5. 免责声明与许可协议
 轩辕作为一个开源的中文金融对话模型，仅限于非商业用途的目的。该模型的设计初衷是为了促进学术研究、技术探索和个人学习等非商业领域的应用。我们鼓励学术界、开发者和研究人员使用轩辕来推动对话系统和金融领域的进步。其中，商业用途包括但不限于将轩辕用于产品、服务、咨询等与商业利益相关的活动。
@@ -53,4 +54,4 @@ CGCE: A Chinese Generative Chat Evaluation Benchmark for General and Financial D
 对于轩辕模型生成的言论，我们不承担任何责任。使用者在将轩辕应用于非商业用途时，需要自行承担潜在的风险，并始终保持审慎。我们建议用户在使用模型输出的信息时，进行独立的验证和判断，并根据个人的需求和情境进行决策。我们希望通过轩辕的开源发布，为学术界和开发者社区提供一个有益的工具，并推动对话系统和金融技术的发展。我们鼓励大家积极探索和创新，以进一步拓展和应用轩辕的潜力，并共同促进人工智能在金融领域的研究和实践。
 
 ## 6. 总结
-我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。如果你对轩辕的有任何问题、反馈与建议请通过此[链接](https://forms.gle/DfE61kAz9FVHqysb9)提交。
+我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。
