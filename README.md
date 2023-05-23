@@ -38,7 +38,7 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 <img width="481" alt="9038f05c34b82b3eae00603f6" src="https://github.com/Duxiaoman-DI/XuanYuan2.0/assets/10808269/1a49c9e3-634f-4de7-8b08-faf686035d6a">
 
 
-## 4. 相关论文与引用
+## 4. 相关论文
 
 如果有用到轩辕相关方法和模型，请引用以下论文：
 
