@@ -1,5 +1,5 @@
 # 轩辕：首个千亿级中文金融对话模型
-XuanYuan 2.0: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters
+XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters
 
 ## 1. 模型简介
 轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。轩辕在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调，它不仅可以应对通用领域的问题，也可以解答与金融相关的各类问题，为用户提供准确、全面的金融信息和建议。
