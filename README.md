@@ -54,8 +54,13 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 可以通过以下代码调用本模型：
 
 ```python
-import torch
-、、、
+from transformers import AutoTokenizer, AutoModel
+tokenizer = AutoTokenizer.from_pretrained("MODEL_NAME", trust_remote_code=True)
+model = AutoModel.from_pretrained("MODEL_NAME", trust_remote_code=True).half().cuda()
+model = model.eval()
+input_ids = tokenizer(payload, return_tensors="pt").input_ids
+logits = model.generate(input_ids)
+```
 
 ## 6. 免责声明与许可协议
 轩辕作为一个开源的中文金融对话模型，仅限于非商业用途的目的。该模型的设计初衷是为了促进学术研究、技术探索和个人学习等非商业领域的应用。我们鼓励学术界、开发者和研究人员使用轩辕来推动对话系统和金融领域的进步。其中，商业用途包括但不限于将轩辕用于产品、服务、咨询等与商业利益相关的活动。
