@@ -56,10 +56,8 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 ```python
 from transformers import AutoTokenizer, AutoModel
 tokenizer = AutoTokenizer.from_pretrained("MODEL_NAME", trust_remote_code=True)
-model = AutoModel.from_pretrained("MODEL_NAME", trust_remote_code=True).half().cuda()
+model = AutoModel.from_pretrained("MODEL_NAME", trust_remote_code=True)
 model = model.eval()
-input_ids = tokenizer(payload, return_tensors="pt").input_ids
-logits = model.generate(input_ids)
 ```
 
 ## 6. 免责声明与许可协议
