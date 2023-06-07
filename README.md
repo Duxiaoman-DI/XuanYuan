@@ -57,7 +57,21 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 from transformers import AutoTokenizer, AutoModel
 tokenizer = AutoTokenizer.from_pretrained("MODEL_NAME", trust_remote_code=True)
 model = AutoModel.from_pretrained("MODEL_NAME", trust_remote_code=True)
-model = model.eval()
+```
+
+【热门问题】如何调用轩辕模型？
+
+由于本模型较大并不支持线上API测试，请下载模型后使用transformers库的AutoTokenizer和AutoModel进行调用。
+轩辕对话模型的输入示例：
+
+```text
+BOS_TOKEN + "Human: " + query + "\n\nAssistant: "
+```
+
+轩辕对话模型的生成示例：
+
+```python
+output = model.generate(**input, do_sample=True, temperature=0.8, top_k=50, top_p=0.9, early_stopping=True, repetition_penalty=1.1, min_new_tokens=1, max_new_tokens=256)
 ```
 
 ## 6. 免责声明与许可协议
