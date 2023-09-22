@@ -20,11 +20,11 @@
 # 目录
 
 - [XuanYuan-70B](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#xuanyuan-70b)
-  - [介绍](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#介绍)   
-  - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#通用评测)
-  - [金融评测](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#金融评测)
-- [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#开源金融数据集)
-- [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#轩辕-176B：首个千亿级中文金融对话模型)
+  - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)   
+  - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
+  - [金融评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
+- [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
+- [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
 
 # XuanYuan-70B
 
