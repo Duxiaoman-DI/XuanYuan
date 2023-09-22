@@ -1,4 +1,4 @@
-# FinanceIQ：中文金融领域知识评估基准
+# FinanceIQ：中文金融领域知识评估数据集
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ" target="_blank" style="margin-left: 10px">数据集</a> 
@@ -6,7 +6,7 @@
 
 ## 简介
 
-FinanceIQ是一个专注于金融领域的中文评估基准，重点评估大语言模型在金融场景下的知识和推理能力。FinanceIQ涵盖了10个金融大类及36个金融小类，总计7173个单项选择题。
+FinanceIQ是一个专注于金融领域的中文评估数据集，重点评估大语言模型在金融场景下的知识和推理能力。FinanceIQ涵盖了10个金融大类及36个金融小类，总计7173个单项选择题。
 
 <p align="center"> <img src="resources/logo.png" style="width: 100%;" id="title-icon">       </p>
 
