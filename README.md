@@ -1,4 +1,4 @@
-# News
+# XuanYuan-70B
 XuanYuan-70B模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)
 
 
