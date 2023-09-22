@@ -1,9 +1,10 @@
 # News
-●[9/22/2023] 🔥开源XuanYuan-70B Base模型.模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
+[敬请期待] 📢近期将继续开源XuanYuan-70B Chat模型和XuanYuan-70B-16k版本模型，请大家持续关注
+[9/22/2023] 🔥开源XuanYuan-70B Base模型.模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
-●[9/22/2023] 🔥开源50G高质量中文金融数据.更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
+[9/22/2023] 🔥开源50G高质量中文金融数据.更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
-●[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。模型下载： [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
+[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。模型下载： [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
 
 
 # 轩辕：首个千亿级中文金融对话模型
