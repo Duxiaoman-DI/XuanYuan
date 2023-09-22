@@ -1,3 +1,7 @@
+# News
+XuanYuan-70B模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)
+
+
 # 轩辕：首个千亿级中文金融对话模型
 XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters
 
