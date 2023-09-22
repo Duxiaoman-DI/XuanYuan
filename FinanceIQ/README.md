@@ -1,7 +1,6 @@
 # FinanceIQ：中文金融领域知识评估基准
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-🏆 <a href="https://github.com/Duxiaoman-DI/FinanceIQ/#排行榜" target="_blank"  style="margin-left: 10px">排行榜</a>  | 
 🤗 <a href="https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ" target="_blank" style="margin-left: 10px">数据集</a> 
 </p>
 
@@ -31,7 +30,7 @@ FinanceIQ是一个专注于金融领域的中文评估基准，重点评估大�
 
 **题目改写**：为了进一步评估模型真实泛化能力，提升题目多样性，我们在不改变题目原意的前提下使用GPT4对所有精选后的原始题目的描述方式进行了改写，之后经过专业人员的仔细校对，保证题目的改写质量。同时，我们也对每道题目的四个选项均进行了随机的顺序打乱。经过这些步骤，我们实现了对原始题目的“适度改造”，使得对于参评模型来说，这是一道训练过程中“未见过”的测试题目。这样做的好处，首先可以很大程度上缓解“数据泄漏”的现象，将所有模型放在“同一起跑线”上进行客观公正地评估，其次，提升了题目的多样性，可以观察和衡量模型在金融领域知识上的泛化能力。题目改写前后的示例请见文末。
 
-## 排行榜
+## 评测成绩
 
 我们将所有参评模型按照Base底座模型和Chat模型两类分别测评，并分别采用 five-shot 和 zero-shot 的评测方式。以下表格显示了各模型的表现。为了便于对比，我们将GPT4、ChatGPT、ErnieBot和ErnieBot-Turbo这四个API模型同时列在了两个表里。
 
@@ -59,7 +58,6 @@ FinanceIQ是一个专注于金融领域的中文评估基准，重点评估大�
 
 | 模型                                                                    | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
 | ----------------------------------------------------------------------- | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
-| [XuanYuan-70B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) | -      | -          | -            | -            | -            | -            | -      | -      | -            | -          | -      |
 | [GPT4](https://openai.com/gpt4)                                            | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
 | [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11)         | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
 | [Baichuan2-13B-Chat](https://github.com/baichuan-inc/Baichuan2)            | 47.59  | 40.88      | 56.56        | 51.79        | 53.9         | 52.73        | 59.04  | 37.7   | 48.96        | 50.49      | 23.86  |

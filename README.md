@@ -16,7 +16,11 @@
 
 [9/22/2023] 🔥开源50G高质量中文金融数据。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
+<<<<<<< Updated upstream
 [9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
+=======
+[9/22/2023] 🔥发布中文金融领域知识评估数据集 **FinanceIQ**。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
+>>>>>>> Stashed changes
 
 [5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。模型下载： [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
 
