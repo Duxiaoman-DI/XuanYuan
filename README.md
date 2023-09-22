@@ -19,12 +19,12 @@
 
 # 目录
 
-- [XuanYuan-70B](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#xuanyuan-70b)
-  - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)   
+- [XuanYuan-70B](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-70b)
+  - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E4%BB%8B%E7%BB%8D)   
   - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
   - [金融评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
-- [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
-- [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
+- [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E5%BC%80%E6%BA%90%E9%87%91%E8%9E%8D%E6%95%B0%E6%8D%AE%E9%9B%86)
+- [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E8%BD%A9%E8%BE%95-176b%E9%A6%96%E4%B8%AA%E5%8D%83%E4%BA%BF%E7%BA%A7%E4%B8%AD%E6%96%87%E9%87%91%E8%9E%8D%E5%AF%B9%E8%AF%9D%E6%A8%A1%E5%9E%8B)
 
 # XuanYuan-70B
 
