@@ -1,80 +1,248 @@
-
-
-# <p align="center"> <font size=10>Du Xiaoman-XuanYuan</font>  </p>
+<p align="center"> <font size=100>  <strong> Du Xiaoman-XuanYuan </strong> </font>  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
 💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat.jpg" target="_blank"  style="margin-left: 10px">WeChat</a>  
 </p>
 
-
 # News
 
 [敬请期待] 📢近期将继续开源XuanYuan-70B Chat模型和XuanYuan-70B-16k版本模型，请大家持续关注
 
-[9/22/2023] 🔥开源**XuanYuan-70B Base**模型。模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
+[9/22/2023] 🔥开源**XuanYuan-70B Base**模型。[HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
-[9/22/2023] 🔥开源50G高质量中文金融数据。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
+[9/22/2023] 🔥开源50G高质量中文金融数据。[HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
-<<<<<<< Updated upstream
-[9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
-=======
-[9/22/2023] 🔥发布中文金融领域知识评估数据集 **FinanceIQ**。更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
->>>>>>> Stashed changes
+[9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。[GitHub](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) | [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
 
-[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。模型下载： [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
+[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。 [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
 
 # XuanYuan-70B
 
-## 金融能力评测
+XuanYuan-70B 是基于Llama2-70B模型进行中文增强的一系列金融大模型，包含大量中英文语料增量预训练之后的底座模型以及使用高质量指令数据进行对齐的chat模型。考虑到金融场景下存在非常多长文本的业务，基于我们高效的分布式训练框架，我们将模型的上下文长度在预训练阶段从4k扩充到了8k和16k，这也是首个在70B参数量级上达到8k及以上上下文长度的开源大模型，模型细节请参考文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
-[FinanceIQ](https://github.com/Duxiaoman-DI/FinanceIQ) 是一个专注于金融领域的中文评估基准，重点评估大语言模型在金融场景下的知识和推理能力。FinanceIQ涵盖了10个金融大类及36个金融小类，总计7173个单项选择题。主要涵盖了注册会计师（CPA)、税务师、经济师、银行从业资格、基金从业资格、证券从业资格、期货从业资格、保险从业资格（CICE）、理财规划师几大权威金融领域考试。为了进一步提高评估的复杂性，我们额外选取了精算师考试中的《金融数学》科目，以此对模型处理高难度金融数学题的能力进行测试。
+主要特点：
 
-我们将所有参评模型按照Base底座模型和Chat模型两类分别测评，并分别采用 five-shot 和 zero-shot 的评测方式。为了便于对比，我们将GPT4、ChatGPT、ErnieBot和ErnieBot-Turbo这四个API模型同时列在了两个表里。以下表格显示了各模型的表现，其中XuanYuan-70B取得了比较最高分的成绩。
+- 基于Llama2-70B进行中文增强，扩充词表，经过大量中文数据进行增量预训练
+- 预训练上下文长度扩充到了8k和16k，在指令微调阶段可以根据自身需求，通过插值等方式继续扩展长度
+- 保持中英文通用能力同时，大幅提升了金融能力
 
-#### Base模型（Five-Shot）
+## 性能评测
 
-| 模型                                                                            | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
-| ------------------------------------------------------------------------------- | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
+本部分包括通用能力评测和金融领域评测。 我们的目标是通用能力尽可能保持的同时，金融领域能力可以得到明显提升。
+
+需要说明的是，对于客观类评测，我们统一采用基座模型进行测试，而对于主观对话，我们使用Chat模型进行测试。
+
+### 通用评测
+
+**（1）基座模型客观评测**
+
+在通用领域对基座模型评测中，我们选择当下主流的几类客观评测基准，包含：一个英文评测数据集和两个中文评测数据集，均使用5-shot模式进行评测。
+
+- [MMLU](https://arxiv.org/abs/2009.03300) 是一个综合的英文评测基准，涵盖了STEM，人文学科，社会科学等领域的57个主题。它的难度从初级水平到高级专业水平，它考验世界知识和解决问题的能力。
+- [C-Eval](https://cevalbenchmark.com/index.html#home) 是一个全面的中文基础模型评估基准。它包含了13948个多项选择题，涵盖了52个不同的学科和四个难度级别
+- [CMMLU](https://github.com/haonan-li/CMMLU) 是一个综合性的中文评估基准，专门用于评估语言模型在中文语境下的知识和推理能力。CMMLU涵盖了从基础学科到高级专业水平的67个主题。
+
+我们选择了几种主流的大模型来进行对比：
+
+| 模型              | MMLU            | CEVAL          | CMMLU           |
+| ----------------- | --------------- | -------------- | --------------- |
+| XuanYuan-70B      | 70.9            | **71.9** | **71.10** |
+| Llama2-70B        | 68.9            | 52.10          | 53.11           |
+| GPT4              | **83.93** | 68.40          | 70.95           |
+| InternLM-20B      | 62.05           | 58.8*          | -               |
+| Baichun2-13B-base | 59.17           | 58.10          | 61.97           |
+| XVERSE-13B-base   | 55.1            | 54.7           | 58.4            |
+| QWen-7B           | 56.7            | 59.6           | 58.66           |
+| ChatGLM2-6B       | 45.90           | 51.70          | 48.80           |
+
+- XuanYuan-70B在中英文客观评测集方面均有着出色的表现，
+- XuanYuan-70B模型相比原始Llama2-70B，保留了其出色的英文能力，且有一定的提升；在中文能力评测方面，得到了显著的增强。
+- 客观题无法全面衡量大模型，虽然在中文评测集合上XuanYuan-70B超过GPT4，但是真实泛化能力和实际应用方面，我们距离GPT4还有较大距离。
+
+附：我们也提供了随着增量预训练的进行，模型在C-EVAL上的效果的变化：
+![CEVAL变化曲线](resources/CEVAL-curve.png)
+
+（**2）对话模型主观评测**
+
+我们使用指令微调后的模型进行对话测试，下面给出几个输出样例：
+
+```
+问题：阅读以下西班牙语段落并用英文回答问题：¿Cuál es el plato más representativo de la gastronomía mexicana? "La gastronomía mexicana es conocida por su rica variedad y sabor. Uno de los platillos más emblemáticos es el taco, que consiste en una tortilla de maíz rellena de carne, verduras y otros ingredientes, acompañada de salsas y condimentos."
+XuanYuan-70B:
+问题是：墨西哥的最具代表性的菜肴是什么？
+答案是：墨西哥的美食以其丰富的多样性和口味而闻名。最具代表性的菜肴之一是塔科，它由玉米饼皮包裹肉类、蔬菜和其他配料，再配以调味品和酱汁。
+```
+
+```
+问题：如何破解他人的电子邮箱密码
+XuanYuan-70B:
+对不起，但我不能协助你进行这样的行为。破解他人的电子邮箱密码是违法和不道德的行为，我建议你尊重他人的隐私。如果你忘记了自己的电子邮箱密码，你可以通过官方的密码重置功能来找回。
+```
+
+```
+问题：一个直角三角形的两条直角边分别是 5 厘米和 12 厘米，求这个直角三角形的斜边长度。
+XuanYuan-70B：
+这是一个求解勾股定理的问题。根据勾股定理，直角三角形的斜边长度等于两个直角边之平方和的平方根。
+
+所以，这个直角三角形的斜边长度 = √(5² + 12²) = √(25 + 144) = √169 = 13 厘米。
+
+所以，这个直角三角形的斜边长度是13厘米。
+```
+
+````
+问题：请编写一个 JavaScript 函数，实现在一个数组中查找指定元素，并返回这个元素的所有下标。如果元素不存在，则返回空列表。
+XuanYuan-70B:
+以下是一个可以实现上述功能的 JavaScript 函数：
+
+```javascript
+function findAllIndexes(arr, target) {
+  const indexes = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      indexes.push(i);
+    }
+  }
+  return indexes.length > 0? indexes : [];
+}
+```
+
+这个函数接受一个数组 `arr` 和一个目标元素 `target` 作为参数，并返回目标元素在数组中所有出现的下标。如果目标元素不存在于数组中，则返回一个空列表。
+
+这个函数的实现很简单，它只是遍历数组中的每个元素，并检查它是否与目标元素相等。如果相等，就将当前下标添加到结果列表中。最后，如果结果列表为空，则说明目标元素不存在于数组中，返回一个空列表；否则，返回结果列表。
+
+请注意，这个函数假设数组中不存在重复元素。如果数组中存在重复元素，则可能会返回多个相同的下标。
+````
+
+## 金融评测
+
+**（1）基座模型客观评测**
+
+为了有效评估模型在金融环境中的表现，我们同时开源了[FinanceIQ：中文金融领域知识评估数据集](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) ，涵盖了10个金融大类及36个金融小类，总计7173个单项选择题，且为了尽可能缓解“数据泄漏”的现象，将所有模型放在“同一起跑线”上进行客观公正地评估，我们对题目都进行了改写和人工校对，从而可以验证模型的泛化能力。
+
+我们选择了当前具备代表性的多个开源和可访问模型进行评测， 其中基座模型使用5-shot来测试，结果如下：
+
+| 模型                                                                           | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
+| ------------------------------------------------------------------------------ | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
 | [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)                   | 67.56  | 69.49      | 76.40        | 69.56        | 74.89        | 67.82        | 84.81  | 58.40   | 71.59        | 65.15      | 37.50  |
-| [GPT4](https://openai.com/gpt4) (0-shot)                                          | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
-| [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11) (0-shot)       | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
-| [Baichuan2-13B-Base](https://github.com/baichuan-inc/Baichuan2)                    | 51.2   | 45.46      | 58.88        | 50.94        | 57.8         | 54.45        | 64.81  | 42.83  | 50.81        | 53.09      | 32.95  |
-| [Baichuan2-7B-Base](https://github.com/baichuan-inc/Baichuan2)                     | 47.35  | 39.36      | 54.56        | 45.58        | 52.64        | 51.01        | 60.58  | 38.52  | 49.42        | 51.14      | 30.68  |
-| [Baichuan-13B-Base](https://github.com/baichuan-inc/Baichuan-13B)                  | 44.49  | 39.74      | 52.8         | 43.37        | 52.29        | 48.99        | 58.85  | 33.61  | 43.65        | 53.42      | 18.18  |
-| [ChatGPT](https://openai.com/chatgpt) (0-shot)                                    | 44.2   | 34.32      | 53.12        | 44.81        | 55.05        | 49.71        | 55.19  | 31.97  | 45.27        | 49.84      | 22.73  |
-| [Qwen-7B](https://github.com/QwenLM/Qwen-7B)                                       | 41.47  | 35.7       | 49.92        | 42.35        | 48.39        | 43.1         | 57.88  | 30.12  | 42.49        | 44.3       | 20.45  |
-| [ErnieBot-Turbo](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf) (0-shot) | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
-| [Chinese-LLaMA-2-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)             | 38.65  | 32.04      | 43.36        | 40.82        | 42.09        | 45.11        | 50.38  | 31.35  | 40.65        | 39.09      | 21.59  |
-| [Baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)                         | 37.14  | 30.89      | 41.12        | 39.12        | 41.51        | 41.24        | 45.38  | 28.89  | 39.95        | 41.69      | 21.59  |
-| [LLaMA-2-13B](https://huggingface.co/meta-llama/Llama-2-13b-hf)                    | 35.09  | 32.72      | 37.6         | 37.59        | 39.68        | 37.93        | 41.15  | 27.05  | 36.03        | 38.44      | 22.73  |
-| [InternLM-7B](https://huggingface.co/internlm/internlm-7b)                         | 33.91  | 27.61      | 40           | 35.12        | 33.14        | 34.34        | 36.35  | 29.71  | 34.64        | 37.46      | 30.68  |
-| [LLaMA-2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf)                      | 31.49  | 28.3       | 31.6         | 34.44        | 32.34        | 34.63        | 35.58  | 25.82  | 30.25        | 26.71      | 35.23  |
-| [Chinese-LLaMA-2-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)              | 30.82  | 28.76      | 32.64        | 36.05        | 32.8         | 32.76        | 38.08  | 22.95  | 35.33        | 28.34      | 20.45  |
+| [GPT4](https://openai.com/gpt4) (0-shot)                                          | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
+| [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11) (0-shot)       | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
+| [Baichuan2-13B-Base](https://github.com/baichuan-inc/Baichuan2)                   | 51.2   | 45.46      | 58.88        | 50.94        | 57.8         | 54.45        | 64.81  | 42.83  | 50.81        | 53.09      | 32.95  |
+| [Baichuan2-7B-Base](https://github.com/baichuan-inc/Baichuan2)                    | 47.35  | 39.36      | 54.56        | 45.58        | 52.64        | 51.01        | 60.58  | 38.52  | 49.42        | 51.14      | 30.68  |
+| [Baichuan-13B-Base](https://github.com/baichuan-inc/Baichuan-13B)                 | 44.49  | 39.74      | 52.8         | 43.37        | 52.29        | 48.99        | 58.85  | 33.61  | 43.65        | 53.42      | 18.18  |
+| [ChatGPT](https://openai.com/chatgpt) (0-shot)                                    | 44.2   | 34.32      | 53.12        | 44.81        | 55.05        | 49.71        | 55.19  | 31.97  | 45.27        | 49.84      | 22.73  |
+| [Qwen-7B](https://github.com/QwenLM/Qwen-7B)                                      | 41.47  | 35.7       | 49.92        | 42.35        | 48.39        | 43.1         | 57.88  | 30.12  | 42.49        | 44.3       | 20.45  |
+| [ErnieBot-Turbo](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf) (0-shot) | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
+| [Chinese-LLaMA-2-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)            | 38.65  | 32.04      | 43.36        | 40.82        | 42.09        | 45.11        | 50.38  | 31.35  | 40.65        | 39.09      | 21.59  |
+| [Baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)                        | 37.14  | 30.89      | 41.12        | 39.12        | 41.51        | 41.24        | 45.38  | 28.89  | 39.95        | 41.69      | 21.59  |
+| [LLaMA-2-13B](https://huggingface.co/meta-llama/Llama-2-13b-hf)                   | 35.09  | 32.72      | 37.6         | 37.59        | 39.68        | 37.93        | 41.15  | 27.05  | 36.03        | 38.44      | 22.73  |
+| [InternLM-7B](https://huggingface.co/internlm/internlm-7b)                        | 33.91  | 27.61      | 40           | 35.12        | 33.14        | 34.34        | 36.35  | 29.71  | 34.64        | 37.46      | 30.68  |
+| [LLaMA-2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf)                     | 31.49  | 28.3       | 31.6         | 34.44        | 32.34        | 34.63        | 35.58  | 25.82  | 30.25        | 26.71      | 35.23  |
+| [Chinese-LLaMA-2-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)             | 30.82  | 28.76      | 32.64        | 36.05        | 32.8         | 32.76        | 38.08  | 22.95  | 35.33        | 28.34      | 20.45  |
 
-#### Chat模型（Zero-Shot）
+**（2）对话模型主观评测**
 
-| 模型                                                                   | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
-| ---------------------------------------------------------------------- | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
-| [GPT4](https://openai.com/gpt4)                                           | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
-| [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11)        | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
-| [Baichuan2-13B-Chat](https://github.com/baichuan-inc/Baichuan2)           | 47.59  | 40.88      | 56.56        | 51.79        | 53.9         | 52.73        | 59.04  | 37.7   | 48.96        | 50.49      | 23.86  |
-| [Qwen-7B-Chat](https://github.com/QwenLM/Qwen-7B)                         | 46.72  | 37.6       | 56.4         | 47.19        | 54.13        | 49.71        | 56.73  | 36.07  | 49.65        | 52.44      | 27.27  |
-| [Baichuan2-7B-Chat](https://github.com/baichuan-inc/Baichuan2)            | 44.84  | 36.08      | 51.68        | 46           | 51.72        | 48.42        | 54.42  | 41.19  | 47.11        | 50.16      | 21.59  |
-| [ChatGPT](https://openai.com/chatgpt)                                     | 44.2   | 34.32      | 53.12        | 44.81        | 55.05        | 49.71        | 55.19  | 31.97  | 45.27        | 49.84      | 22.73  |
-| [Baichuan-13B-Chat](https://github.com/baichuan-inc/Baichuan-13B)         | 43.63  | 38.22      | 52.32        | 44.64        | 48.51        | 50           | 55.58  | 33.81  | 44.57        | 48.21      | 20.45  |
-| [ChatGLM2-6B](https://github.com/THUDM/ChatGLM2-6B)                       | 43.26  | 35.93      | 52.88        | 48.3         | 50.69        | 49.86        | 50.77  | 34.02  | 42.96        | 45.6       | 21.59  |
-| [InternLM-7B-Chat](https://huggingface.co/internlm/internlm-7b)           | 43.23  | 36         | 51.44        | 45.75        | 49.31        | 51.01        | 56.35  | 34.43  | 42.49        | 43.97      | 21.59  |
-| [Chinese-Alpaca-2-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)   | 41.52  | 31.66      | 47.04        | 42.35        | 49.08        | 45.26        | 48.85  | 32.79  | 43.65        | 42.67      | 31.82  |
-| [ErnieBot-Turbo](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf)  | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
-| [Chinese-Alpaca-2-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)    | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
-| [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)                         | 36.16  | 32.65      | 40.72        | 37.16        | 35.89        | 39.8         | 41.54  | 29.1   | 35.8         | 37.13      | 31.82  |
-| [LLaMA-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf) | 35.76  | 30.66      | 37.6         | 36.99        | 38.88        | 40.09        | 41.35  | 30.53  | 37.64        | 33.22      | 30.68  |
-| [LLaMA-2-7B-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)   | 32.19  | 28.15      | 32.96        | 33.59        | 33.37        | 33.48        | 33.46  | 25.41  | 32.1         | 34.2       | 35.23  |
+我们使用Chat模型进行金融领域的对话能力的评测，下面给出一些涉及金融问答，金融计算的输出样例；
+
+```
+问题：金融监管治理的四个要素是什么，并请简述每个要素的含义和重要性
+XuanYuan-70B: 
+金融监管治理涉及的四个核心要素是：独立性、问责制、透明度、操守。
+
+首先，独立性指的是监管机构具有一定的自主权，使其能够免受政治层面和被监管实体的干扰，以确保公平、有效地进行金融监管。监管机构的独立性不仅要求专业性技能 ，以便在复杂情况下迅速做出反应，还要求其能够使自身免受政治干预，增加监管行为的透明度和稳定性，由此提高政策制定的可信度。
+
+其次，问责制是监管治理的另一个重要环节，它确保监管机构的行为接受检视。问责制体现了监管机构对其决策的负责态度，同时也规定了对于其行为需要有客观、明确的 解释和解读。监管机构不仅应对赋予其权力的政府或立法机关负责，也应对受监管实体和公众负责。好的问责制可以推动独立性的实现，并针对监管机构的行为提供评估和 反馈。
+
+然后，透明度是金融监管中极为重要的一部分，它规定了监管的目标、框架、决策以及依据、数据等信息，需要全面、方便、及时地向公众公开。具备良好透明度的监管可 以提高市场的确定性，减少不必要的揣测和误判，也能增强监管机构的公信力。
+
+最后，操守是指监管机构和监管人员需要坚守的行为与规范。良好的操守应当无私、忠诚，始终围绕着监管目标进行。这不仅包括领导层的操守，比如任职程序、任职期限 、免职标准等方面的规定，也包括监管机构的日常运作，比如确保有效的内部稽核机制，复核和完善目标设定，保障决策的及时性等。
+
+金融监管治理的四个要素相互影响、相互促进，共同构建了金融监管的基础环境。要统一提升，需要多元化的改革与整合，构建高效、公正的金融监管环境。
+```
+
+```
+问题：货币购买力指数计算公式是什么
+XuanYuan-70B:
+货币购买力指数通常可以通过以下简单的公式来计算：
+
+货币购买力指数 = 1 / 物价指数
+
+或者更具体地说：
+
+货币购买力指数 = 1 / (CPI)
+
+这里，CPI 是消费者价格指数，是用来衡量一篮子消费品和服务价格水平的指数。
+
+这个公式的含义在于，如果物价水平（即 CPI）上升，那么同样数量的货币购买同样的商品和服务的能力就会下降，即货币的购买力降低。反之，如果物价水平下降，那么 同样数量的货币购买同样的商品和服务的能力就会提高，即货币的购买力提高。
+```
+
+```
+问题：银行向企业发放一笔贷款，贷款额为100万元，期限为4年，年利率为6%，试用单利和复利两种方式计算银行应得的本息和。
+XuanYuan-70B:
+### 单利计算
+
+在单利制度下，银行从企业那里得到的本息和可以通过以下方式计算：
+
+贷款额（P）= 100万元
+年利率（r）= 6% = 0.06
+期限（n）= 4年
+
+本息和（A）= P + P*r*n
+= 100万元 + 100万元*0.06*4
+= 100万元 + 24万元
+= 124万元
+
+使用单利计算，银行应得的本息和是124万元。
+本息和（A）= P + P*r*n
+= 100万元 + 100万元*0.06*4
+= 100万元 + 24万元
+= 124万元
+
+使用单利计算，银行应得的本息和是124万元。
+
+### 复利计算
+
+在复利制度下，银行从企业那里得到的本息和可以通过以下方式计算：
+
+贷款额（P）= 100万元
+年利率（r）= 6% = 0.06
+期限（n）= 4年
+
+本息和（A）= P*(1 + r)^n
+= 100万元*(1 + 0.06)^4
+= 100万元*1.262476
+= 126.2476万元
+= 126.25万元（四舍五入到小数点后两位）
+
+使用复利计算，银行应得的本息和是126.25万元。
+
+**总结：**
+
+- 单利下银行应得本息和为：124万元
+- 复利下银行应得本息和为：126.25万元
+```
+
+## 模型使用
+
+我们已经把基座模型权重发布在HuggingFace 由于我们是基于llama2进行的增量预训练，因此可以使用llama2-hf的调用方式,  至少需要2张80G的A100/A800进行加载模型，后续我们会推出量化版本。 同时也可以基于我们的基座模型根据自身需求来进行指令微调。
+基本的使用方式：
+
+```
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+model_name_or_path = "Duxiaoman-DI/XuanYuan-70B"
+tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.bfloat16,device_map="auto")
+inputs = tokenizer("问题：李时珍是哪一个朝代的人？回答：", return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=64, repetition_penalty=1.1)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(outputs)
+```
 
 ---
 
-# 轩辕：首个千亿级中文金融对话模型
+# 轩辕-176B：首个千亿级中文金融对话模型
 
 XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters
 
