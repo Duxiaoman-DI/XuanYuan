@@ -17,8 +17,18 @@
 
 [5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。 [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
 
+# 目录
+
+- [XuanYuan-70B](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#xuanyuan-70b)
+  - [介绍](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#介绍)   
+  - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#通用评测)
+  - [金融评测](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#金融评测)
+- [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#开源金融数据集)
+- [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan/main/README.md#轩辕-176B：首个千亿级中文金融对话模型)
+
 # XuanYuan-70B
 
+## 介绍
 XuanYuan-70B 是基于Llama2-70B模型进行中文增强的一系列金融大模型，包含大量中英文语料增量预训练之后的底座模型以及使用高质量指令数据进行对齐的chat模型。考虑到金融场景下存在非常多长文本的业务，基于高效的分布式训练框架，我们将模型的上下文长度在预训练阶段从4k扩充到了8k和16k，这也是首个在70B参数量级上达到8k及以上上下文长度的开源大模型，模型细节请参考文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
 主要特点：
@@ -242,6 +252,26 @@ print(outputs)
 
 ---
 
+# 开源金融数据集
+本次开源高质量中文金融数据集FinCorpus，语料大小约60G，主要构成如下：
+
+|文件名|数据类别|大小|
+|--|--|--|
+|announcement_data.jsonl|上市公司公告|20G|
+|fin_news_data.jsonl|金融资讯/新闻|30G|
+|fin_articles_data.jsonl|金融资讯/新闻|10G|
+|fin_exam.jsonl|金融试题|370M|
+
+数据格式：
+```
+{
+  "text": <文本内容>,
+  "meta": {
+     "source": <数据来源>
+  }
+}
+```
+
 # 轩辕-176B：首个千亿级中文金融对话模型
 
 XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Parameters
@@ -324,12 +354,12 @@ BOS_TOKEN + "Human: " + query + "\n\nAssistant: "
 output = model.generate(**input, do_sample=True, temperature=0.8, top_k=50, top_p=0.9, early_stopping=True, repetition_penalty=1.1, min_new_tokens=1, max_new_tokens=256)
 ```
 
-## 6. 免责声明与许可协议
+# 免责声明与许可协议
 
 轩辕作为一个开源的中文金融对话模型，仅限于非商业用途的目的。该模型的设计初衷是为了促进学术研究、技术探索和个人学习等非商业领域的应用。我们鼓励学术界、开发者和研究人员使用轩辕来推动对话系统和金融领域的进步。其中，商业用途包括但不限于将轩辕用于产品、服务、咨询等与商业利益相关的活动。
 
 对于轩辕模型生成的言论，我们不承担任何责任。使用者在将轩辕应用于非商业用途时，需要自行承担潜在的风险，并始终保持审慎。我们建议用户在使用模型输出的信息时，进行独立的验证和判断，并根据个人的需求和情境进行决策。我们希望通过轩辕的开源发布，为学术界和开发者社区提供一个有益的工具，并推动对话系统和金融技术的发展。我们鼓励大家积极探索和创新，以进一步拓展和应用轩辕的潜力，并共同促进人工智能在金融领域的研究和实践。
 
-## 7. 总结
+# 总结
 
 我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。
