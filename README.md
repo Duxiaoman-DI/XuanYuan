@@ -1,5 +1,5 @@
 # News
-●[9/22/2023] 🔥开源XuanYuan-70B Base模型.模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)
+●[9/22/2023] 🔥开源XuanYuan-70B Base模型.模型更新中: [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
 ●[9/22/2023] 🔥开源50G高质量中文金融数据.更新中: [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
