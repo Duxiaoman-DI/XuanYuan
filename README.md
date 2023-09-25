@@ -89,6 +89,10 @@ XuanYuan-70B-Chat: 在不久的将来，金融科技（FinTech）将深刻地改
 ```
 问题：阅读以下西班牙语段落并用英文回答问题：¿Cuál es el plato más representativo de la gastronomía mexicana? "La gastronomía mexicana es conocida por su rica variedad y sabor. Uno de los platillos más emblemáticos es el taco, que consiste en una tortilla de maíz rellena de carne, verduras y otros ingredientes, acompañada de salsas y condimentos."
 XuanYuan-70B-Chat:
+The question is: "What is the most representative dish of Mexican cuisine?"
+Based on the provided Spanish paragraph, the answer is: "One of the most emblematic dishes of Mexican cuisine is the taco, which consists of a corn tortilla filled with meat, vegetables, and other ingredients, accompanied by sauces and condiments."
+问题：用中文呢？
+XuanYuan-70B-Chat:
 问题是：墨西哥的最具代表性的菜肴是什么？
 答案是：墨西哥的美食以其丰富的多样性和口味而闻名。最具代表性的菜肴之一是塔科，它由玉米饼皮包裹肉类、蔬菜和其他配料，再配以调味品和酱汁。
 ```
