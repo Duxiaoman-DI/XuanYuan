@@ -11,7 +11,7 @@
 
 [9/22/2023] 🔥开源**XuanYuan-70B Base**模型。[HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
-[9/22/2023] 🔥开源50G高质量中文金融数据。[HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
+[9/22/2023] 🔥开源60G高质量中文金融数据。[HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
 [9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。[GitHub](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) | [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
 
@@ -398,3 +398,5 @@ output = model.generate(**input, do_sample=True, temperature=0.8, top_k=50, top_
 # 总结
 
 我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。
+
+![](resources/joinusdxm.png)
