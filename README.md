@@ -1,7 +1,7 @@
 <p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
+🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">Hugging Face</a>  • 
 💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat.jpg" target="_blank"  style="margin-left: 10px">WeChat</a>  
 </p>
 
@@ -9,13 +9,13 @@
 
 [敬请期待] 📢近期将继续开源XuanYuan-70B Chat模型和XuanYuan-70B-16k版本模型，请大家持续关注
 
-[9/22/2023] 🔥开源**XuanYuan-70B Base**模型。[HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
+[9/22/2023] 🔥开源**XuanYuan-70B Base**模型。[Hugging Face](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
-[9/22/2023] 🔥开源60G高质量中文金融数据。[HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
+[9/22/2023] 🔥开源60G高质量中文金融数据。[Hugging Face](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
-[9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。[GitHub](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) | [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
+[9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。[GitHub](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) | [Hugging Face](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
 
-[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。 [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
+[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。 [Hugging Face](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
 
 # 目录
 
@@ -270,7 +270,7 @@ XuanYuan-70B-Chat:
 
 ## 模型使用
 
-我们已经把基座模型权重发布在HuggingFace 由于我们是基于llama2进行的增量预训练，因此可以使用llama2-hf的调用方式,  至少需要2张80G的A100/A800进行加载模型，后续我们会推出量化版本。 同时也可以基于我们的基座模型根据自身需求来进行指令微调。
+我们已经把基座模型权重发布在Hugging Face 由于我们是基于llama2进行的增量预训练，因此可以使用llama2-hf的调用方式,  至少需要2张80G的A100/A800进行加载模型，后续我们会推出量化版本。 同时也可以基于我们的基座模型根据自身需求来进行指令微调。
 基本的使用方式：
 
 ```
@@ -318,7 +318,7 @@ XuanYuan: A Large Chinese Financial Chat Model with Hundreds of Billions Paramet
 
 ## 2. 模型下载
 
-千亿级的轩辕模型已可以在[Huggingface](https://huggingface.co/xyz-nlp/XuanYuan2.0)中申请下载。
+千亿级的轩辕模型已可以在[Hugging Face](https://huggingface.co/xyz-nlp/XuanYuan2.0)中申请下载。
 
 ## 3. 模型评测
 
