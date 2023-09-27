@@ -63,7 +63,7 @@ XuanYuan-70B 是基于Llama2-70B模型进行中文增强的一系列金融大模
 | InternLM-20B      | 62.05           | 58.8*          | -               |
 | Baichun2-13B-base | 59.17           | 58.10          | 61.97           |
 | XVERSE-13B-base   | 55.1            | 54.7           | 58.4            |
-| QWen-7B           | 56.7            | 59.6           | 58.66           |
+| Qwen-7B           | 56.7            | 59.6           | 58.66           |
 | ChatGLM2-6B       | 45.90           | 51.70          | 48.80           |
 
 - XuanYuan-70B在中英文客观评测集方面均有着出色的表现，
@@ -172,6 +172,7 @@ def longest_common_subsequence(str1, str2):
 | [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)                   | 67.56  | 69.49      | 76.40        | 69.56        | 74.89        | 67.82        | 84.81  | 58.40   | 71.59        | 65.15      | 37.50  |
 | [GPT4](https://openai.com/gpt4) (0-shot)                                          | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
 | [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11) (0-shot)       | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
+| [Qwen-14B](https://huggingface.co/Qwen/Qwen-14B)                                  | 53.29  | 46.76      | 63.2         | 56.38        | 58.83        | 57.76        | 69.23  | 42.62  | 56.58        | 57.65      | 23.86  |
 | [Baichuan2-13B-Base](https://github.com/baichuan-inc/Baichuan2)                   | 51.2   | 45.46      | 58.88        | 50.94        | 57.8         | 54.45        | 64.81  | 42.83  | 50.81        | 53.09      | 32.95  |
 | [Baichuan2-7B-Base](https://github.com/baichuan-inc/Baichuan2)                    | 47.35  | 39.36      | 54.56        | 45.58        | 52.64        | 51.01        | 60.58  | 38.52  | 49.42        | 51.14      | 30.68  |
 | [Baichuan-13B-Base](https://github.com/baichuan-inc/Baichuan-13B)                 | 44.49  | 39.74      | 52.8         | 43.37        | 52.29        | 48.99        | 58.85  | 33.61  | 43.65        | 53.42      | 18.18  |
