@@ -2,7 +2,7 @@
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
-💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat3.png" target="_blank"  style="margin-left: 10px">WeChat</a>   
+💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat3.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
 # News
