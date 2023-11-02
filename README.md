@@ -2,27 +2,38 @@
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
-💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat4.png" target="_blank"  style="margin-left: 10px">WeChat</a>   
+💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat5.png" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
 # News
 
-[敬请期待] 📢近期将继续开源XuanYuan-70B Chat模型和XuanYuan-70B-16k版本模型，请大家持续关注
+[11/1/2023] 🔥开源**XuanYuan-70B-Chat模型及8-bit和4bit量化模型**
 
-[9/22/2023] 🔥开源**XuanYuan-70B Base**模型。[HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
+[9/22/2023] 🔥开源**XuanYuan-70B Base**模型
 
-[9/22/2023] 🔥开源60G高质量中文金融数据。[HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
+[9/22/2023] 🔥开源60G高质量中文金融数据。[Hugging Face](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus)
 
 [9/22/2023] 🔥开源中文金融领域知识评估数据集 **FinanceIQ**。[GitHub](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) | [HuggingFace](https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ)
 
-[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型。 [HuggingFace](https://huggingface.co/Duxiaoman-DI/XuanYuan-176B)
+[5/21/2023] 开源度小满轩辕-176B大模型，在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调。是国内首个开源的千亿级中文对话大模型
+
+**目前发布的模型和下载链接**如下：
+
+|                 | 基座模型                                                     | Chat模型                                                     | 8-bit量化Chat模型                                            | 4-bit量化Chat模型                                         |
+| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| XuanYuan-70B-8k | 🤗 [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) | 🤗 [XuanYuan-70B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) | 🤗 [XuanYuan-70B-Chat-8bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-8bit ) | 🤗  [XuanYuan-70B-Chat-4bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-4bit) |
+| XuanYuan-176B | | 🤗 [XuanYuan-176B-Chat](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
+
+技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
 
 # 目录
 
-- [XuanYuan-70B](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-70b)
+- [XuanYuan-70系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-70b)
   - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E4%BB%8B%E7%BB%8D)   
   - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
   - [金融评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%87%91%E8%9E%8D%E8%AF%84%E6%B5%8B)
+  - [推理部署](https://github.com/Duxiaoman-DI/XuanYuan#%E6%8E%A8%E7%90%86%E9%83%A8%E7%BD%B2)
+  - [样例展示](https://github.com/Duxiaoman-DI/XuanYuan#%E6%A0%B7%E4%BE%8B%E5%B1%95%E7%A4%BA)
 - [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E5%BC%80%E6%BA%90%E9%87%91%E8%9E%8D%E6%95%B0%E6%8D%AE%E9%9B%86)
 - [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E8%BD%A9%E8%BE%95-176b%E9%A6%96%E4%B8%AA%E5%8D%83%E4%BA%BF%E7%BA%A7%E4%B8%AD%E6%96%87%E9%87%91%E8%9E%8D%E5%AF%B9%E8%AF%9D%E6%A8%A1%E5%9E%8B)
 
@@ -44,8 +55,6 @@ XuanYuan-70B 是基于Llama2-70B模型进行中文增强的一系列金融大模
 需要说明的是，对于客观类评测，我们统一采用基座模型进行测试，而对于主观对话，我们使用Chat模型进行测试。
 
 ### 通用评测
-
-**（1）基座模型客观评测**
 
 在通用领域对基座模型评测中，我们选择当下主流的几类客观评测基准，包含：一个英文评测数据集和两个中文评测数据集，均使用5-shot模式进行评测。
 
@@ -73,39 +82,241 @@ XuanYuan-70B 是基于Llama2-70B模型进行中文增强的一系列金融大模
 附：我们也提供了随着增量预训练的进行，模型在C-EVAL上的效果的变化：
 ![CEVAL变化曲线](resources/CEVAL-curve.png)
 
-（**2）对话模型主观评测**
 
-我们使用通用+金融指令微调后的XuanYuan-70B-Chat模型进行对话测试，下面给出几个输出样例：
+## 金融评测
+
+为了有效评估模型在金融环境中的表现，我们同时开源了[FinanceIQ：中文金融领域知识评估数据集](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) ，涵盖了10个金融大类及36个金融小类，总计7173个单项选择题，且为了尽可能缓解“数据泄漏”的现象，将所有模型放在“同一起跑线”上进行客观公正地评估，我们对题目都进行了改写和人工校对，从而可以验证模型的泛化能力。
+
+我们选择了当前具备代表性的多个开源和可访问模型进行评测， 其中基座模型使用5-shot来测试，Chat模型使用0-shot来测试，结果如下：
+
+| 模型                                                                           | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
+| ------------------------------------------------------------------------------ | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
+| [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)                   | 67.56  | 69.49      | 76.40        | 69.56        | 74.89        | 67.82        | 84.81  | 58.40   | 71.59        | 65.15      | 37.50  |
+| [XuanYuan-70B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat)         | 63.78  | 65.45      | 73.84        | 71.09        | 73.97        | 59.77        | 67.31  | 47.75   | 73.67      | 67.43      | 37.50  |
+| [GPT4](https://openai.com/gpt4) (0-shot)                                          | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
+| [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11) (0-shot)       | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
+| [Qwen-14B](https://huggingface.co/Qwen/Qwen-14B)                                  | 53.29  | 46.76      | 63.2         | 56.38        | 58.83        | 57.76        | 69.23  | 42.62  | 56.58        | 57.65      | 23.86  |
+| [Baichuan2-13B-Base](https://github.com/baichuan-inc/Baichuan2)                   | 51.2   | 45.46      | 58.88        | 50.94        | 57.8         | 54.45        | 64.81  | 42.83  | 50.81        | 53.09      | 32.95  |
+| [Baichuan2-7B-Base](https://github.com/baichuan-inc/Baichuan2)                    | 47.35  | 39.36      | 54.56        | 45.58        | 52.64        | 51.01        | 60.58  | 38.52  | 49.42        | 51.14      | 30.68  |
+| [Baichuan-13B-Base](https://github.com/baichuan-inc/Baichuan-13B)                 | 44.49  | 39.74      | 52.8         | 43.37        | 52.29        | 48.99        | 58.85  | 33.61  | 43.65        | 53.42      | 18.18  |
+| [ChatGPT](https://openai.com/chatgpt) (0-shot)                                    | 44.2   | 34.32      | 53.12        | 44.81        | 55.05        | 49.71        | 55.19  | 31.97  | 45.27        | 49.84      | 22.73  |
+| [Qwen-7B](https://github.com/QwenLM/Qwen-7B)                                      | 41.47  | 35.7       | 49.92        | 42.35        | 48.39        | 43.1         | 57.88  | 30.12  | 42.49        | 44.3       | 20.45  |
+| [ErnieBot-Turbo](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf) (0-shot) | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
+| [Chinese-LLaMA-2-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)            | 38.65  | 32.04      | 43.36        | 40.82        | 42.09        | 45.11        | 50.38  | 31.35  | 40.65        | 39.09      | 21.59  |
+| [Baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)                        | 37.14  | 30.89      | 41.12        | 39.12        | 41.51        | 41.24        | 45.38  | 28.89  | 39.95        | 41.69      | 21.59  |
+| [LLaMA-2-13B](https://huggingface.co/meta-llama/Llama-2-13b-hf)                   | 35.09  | 32.72      | 37.6         | 37.59        | 39.68        | 37.93        | 41.15  | 27.05  | 36.03        | 38.44      | 22.73  |
+| [InternLM-7B](https://huggingface.co/internlm/internlm-7b)                        | 33.91  | 27.61      | 40           | 35.12        | 33.14        | 34.34        | 36.35  | 29.71  | 34.64        | 37.46      | 30.68  |
+| [LLaMA-2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf)                     | 31.49  | 28.3       | 31.6         | 34.44        | 32.34        | 34.63        | 35.58  | 25.82  | 30.25        | 26.71      | 35.23  |
+| [Chinese-LLaMA-2-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)             | 30.82  | 28.76      | 32.64        | 36.05        | 32.8         | 32.76        | 38.08  | 22.95  | 35.33        | 28.34      | 20.45  |
+
+## 推理部署
+
+XuanYuan-70B的基座模型、Chat模型以及8-bit和4bit量化模型均已发布在Hugging Face，请根据上述的链接进行下载。下面我们给出基座模型和Chat模型的推理部署使用方法。
+
+
+### 依赖安装
+
 ```
-问题：生成一个主题为“金融科技的未来”文章的摘要
-XuanYuan-70B-Chat: 在不久的将来，金融科技（FinTech）将深刻地改变我们的日常生活。从支付方式到投资决策，从保险到财富管理，这个领域的进步将无处不在。在这个快速发展的行业中，人工智能（AI）、区块链、大数据等新兴技术正在为金融科技带来前所未有的创新。
-
-随着科技的发展，金融科技的未来趋势将更加明显。首先，人工智能将在金融领域发挥越来越重要的作用。智能客服、智能助贷、智能投顾等应用将为消费者提供更加个性化、便捷的服务。此外，区块链技术将改变金融交易的基本模式，提供安全、透明、高效的交易环境。同时，大数据将为金融风险管理、信用评估等领域提供强大的支持。
-
-然而，金融科技的发展也带来了一些挑战。数据安全、隐私保护、监管政策等问题亟待解决。为了确保金融科技的可持续发展，政府、企业和社会组织需要共同努力，制定合理的政策和规范，推动行业的健康发展。
-
+torch >= 2.0
+transformers >= 4.33.1
+accelerate
+sentencepiece
+bitsandbytes(8bit量化所需)
+optimum(4bit量化所需)
+auto-gptq(4bit量化所需)
+vllm(推理加速所需)
 ```
 
+资源需求：
+
+- 对于基座模型和Chat模型，部署至少需要2张80G的显卡进行加载模型
+- 对于8bit量化版本，推理部署至少需要1张80G的显卡进行加载模型
+- 对于4bit量化版本，，推理部署至少需要1张40G的显卡进行加载模型
+
+
+
+### Base模型使用方法
+
+因为XuanYuan-70B系列模型均是基于Llama2-70B进行增量预训练而来，因此基座模型的使用方法与Llama2基座模型保持一致。
+
+```python
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+model_name_or_path = "Duxiaoman-DI/XuanYuan-70B"
+tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.bfloat16,device_map="auto")
+model.eval()
+inputs = tokenizer("问题：李时珍是哪一个朝代的人？回答：", return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=64, repetition_penalty=1.1)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(outputs)
 ```
-问题：阅读以下西班牙语段落并用英文回答问题：¿Cuál es el plato más representativo de la gastronomía mexicana? "La gastronomía mexicana es conocida por su rica variedad y sabor. Uno de los platillos más emblemáticos es el taco, que consiste en una tortilla de maíz rellena de carne, verduras y otros ingredientes, acompañada de salsas y condimentos."
-XuanYuan-70B-Chat:
+
+
+
+### Chat模型使用方法
+
+在指令微调构造prompt的时候，我们参考了[FastChat](https://github.com/lm-sys/FastChat)的对话构造方式，简单代码示例如下：
+
+```python
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+model_name_or_path = "Duxiaoman-DI/XuanYuan-70B-Chat"
+
+tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path, device_map="auto")
+model.eval()
+system_message = "以下是用户和人工智能助手之间的对话。用户以Human开头，人工智能助手以Assistant开头，会对人类提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与 与不道德、不安全、有争议、政治敏感等相关的话题、问题和指示。\n"
+seps = [" ", "</s>"]
+roles = ["Human", "Assistant"]
+
+content = "介绍下你自己"
+prompt = system_message + seps[0] + roles[0] + ": " + content + seps[0] + roles[1] + ":"
+print(f"输入: {content}")
+inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.7, top_p=0.95)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(f"输出: {outputs}")
+```
+
+- 示例同时支持8bit和4bit的量化模型
+- 示例仅为最简单的部署代码，没有考虑多轮、推理加速等;  完整demo请参考cli_demo.py
+
+
+
+### CLI工具
+
+我们提供一个了基于命令行的demo，支持多轮对话和基于vLLM的推理加速。
+
+> vllm暂时不支持量化模型
+
+```
+python3 cli_demo.py --checkpoint_path <XuanYuan-70B-Chat Path>
+```
+
+举例如下：
+
+```
+########
+输入为: EXIT!! 表示退出
+输入为: CLEAR!! 表示清空上下文
+########
+输入: 你好
+输出: 你好，很高兴能为你提供帮助。
+输入: 介绍下你自己
+输出: 我是轩辕大模型，一个由度小满数据智能应用部AI Lab 开发的人工智能助手，我可以回答各种问题，提供实用的建议和帮助，帮助用户完成各种任务。
+输入: 有2块五仁月饼，3块莲蓉月饼，2块豆沙月饼，这些月饼的大小形状质量完全相同。从这7块月饼中，任意取出3块，那么三种月饼都取到 的可能性是几分之几？
+输出: 这是一个组合数学问题，我们可以通过计算组合数来解答。
+三种月饼都取到，即取到五仁、莲蓉和豆沙各一块。
+五仁月饼的选取方法有2种，莲蓉月饼的选取方法有3种，豆沙月饼的选取方法有2种，所以总的取出一种五仁、一种莲蓉、一种豆沙的方法有2*3*2=12种。
+从7块月饼中任意取出3块月饼的总的组合数为C(7,3)=35种。
+所以，从这7块月饼中，任意取出3块，三种月饼都取到 的可能性为12/35。
+```
+
+
+### 量化部署
+
+为了降低用户在本地使用XuanYuan的成本，降低显存需求，我们提供量化好的Xuanyuan-70B-Chat模型8bit和4bit模型。
+
+**8bit离线量化模型**
+
+在8bit量化算法上，我们使用目前社区广泛使用的[bitsandbytes](https://github.com/TimDettmers/bitsandbytes)库。该库包含LLM.int8()量化算法的实现以及一系列量化的工具，
+同时该方法已在transformers库里做了集成，使用较为容易。经过我们的测试，8bit量化可以近乎无损。
+
+**4bit离线量化模型**
+
+在4bit量化算法上，我们使用[auto-gptq](https://github.com/PanQiWei/AutoGPTQ)工具。该库实现的GPTQ算法是目前4bit量化最受欢迎的方法，
+同时该方法在transformers库和optimum库里做了集成，使用较为容易。4bit量化损失很低，基本可以正常使用。
+
+
+
+#### 量化效果
+
+下表给出了不同模型所需显存，以及在三个评测基准上CEVAL，CMMLU和MMLU上效果：
+
+| 模型                   | 显存 | CEVAL | CMMLU | MMLU |
+| ---------------------- | ---- | ----- | ----- | ---- |
+| XuanYuan-70B-Chat      | 129G | 62.15 | 60.41 | 65.3 |
+| XuanYuan-70B-Chat-8bit | 65G  | 62.25 | 59.99 | 65.0 |
+| XuanYuan-70B-Chat-4bit | 35G  | 60.94 | 58.76 | 63.0 |
+
+可以看出：
+
+- 8bit和4bit的量化模型相比原始float16的模型，空间分别降低为原来的1/2和1/4。能够显著降低硬件需求。
+- 8bit的量化模型相原始float16的模型，效果近乎无损，4bit的量化模型，大概下降2个点左右。
+- 我们也对量化版本的Chat模型进行对话人工评测，结论与评测基准类似。
+
+使用量化模请参考上面的Chat模型使用方法的示例代码。
+
+## 样例展示
+
+**(1) 通用场景**
+
+<details>
+
+<summary>摘要生成</summary>
+
+输入: 生成一个主题为“金融科技的未来”文章的摘要
+
+----
+
+输出: 金融科技（Fintech）是指运用各类科技手段创新传统金融行业所提供的产品和服务，提升效率并有效降低运营成本的新兴领域。金融科技的发展正以惊人的速度重塑我们的金融系统，改变着传统金融机构的运营模式，甚至可能会引领一场金融革命。
+  
+金融科技的未来可能会朝着以下几个方向发展：
+  
+1. **全面数字化**：在金融科技的推动下，金融服务已经开始向全面线上化的方向发展，比如无现金支付、移动支付、在线贷款等。未来，金融服务将更加全面地实现数字化，无论是贷款、支付还是理财，都将更加便捷和高效。
+2. **人工智能的应用**：人工智能技术在金融领域的应用正在逐步深化，比如用AI进行风险评估、投资决策等。未来，人工智能可能会成为金融业务的主要驱动力，帮助金融机构更好地满足客户需求，提升业务效率。
+3. **区块链技术的应用**：区块链技术以其去中心化、不可篡改的特性，正在逐步渗透到金融领域。未来，区块链技术可能会在资产证券化、贸易融资等领域得到广泛应用，重塑金融交易的模式。
+4. **监管科技的发展**：随着金融科技的快速发展，监管科技（RegTech）也将成为重要的发展方向。监管科技可以帮助金融机构更好地遵守法规，降低合规成本，提高合规效率。
+  
+总的来说，金融科技的未来将更加数字化、智能化，将更多的科技元素融入到金融服务的每一个环节，为客户提供更加便捷、高效、安全的金融服务。但同时，金融机构也需要关注到金融科技带来的挑战，比如数据安全、风险管理等问题，以确保金融系统的稳健和安全。
+
+</details>
+
+<details>
+
+<summary>多语种翻译</summary>
+
+输入：阅读以下西班牙语段落并用英文回答问题：¿Cuál es el plato más representativo de la gastronomía mexicana? "La gastronomía mexicana es conocida por su rica variedad y sabor. Uno de los platillos más emblemáticos es el taco, que consiste en una tortilla de maíz rellena de carne, verduras y otros ingredientes, acompañada de salsas y condimentos."
+
+----
+
+输出:
 The question is: "What is the most representative dish of Mexican cuisine?"
 Based on the provided Spanish paragraph, the answer is: "One of the most emblematic dishes of Mexican cuisine is the taco, which consists of a corn tortilla filled with meat, vegetables, and other ingredients, accompanied by sauces and condiments."
-问题：用中文呢？
-XuanYuan-70B-Chat:
+
+----
+
+输入：用中文呢？
+
+输出:
 问题是：墨西哥的最具代表性的菜肴是什么？
 答案是：墨西哥的美食以其丰富的多样性和口味而闻名。最具代表性的菜肴之一是塔科，它由玉米饼皮包裹肉类、蔬菜和其他配料，再配以调味品和酱汁。
-```
 
-```
-问题：如何破解他人的电子邮箱密码
-XuanYuan-70B-Chat:
+</details>
+
+<details>
+
+<summary>安全无害</summary>
+
+输入：如何破解他人的电子邮箱密码
+
+---
+输出:
 对不起，但我不能协助你进行这样的行为。破解他人的电子邮箱密码是违法和不道德的行为，我建议你尊重他人的隐私。如果你忘记了自己的电子邮箱密码，你可以通过官方的密码重置功能来找回。
-```
 
-```
-问题：有2块五仁月饼，3块莲蓉月饼，2块豆沙月饼，这些月饼的大小形状质量完全相同。从这7块月饼中，任意取出3块，那么三种月饼都取到 的可能性是几分之几？
-XuanYuan-70B-Chat：
+</details>
+
+<details>
+
+<summary>数学计算</summary>
+
+输入：有2块五仁月饼，3块莲蓉月饼，2块豆沙月饼，这些月饼的大小形状质量完全相同。从这7块月饼中，任意取出3块，那么三种月饼都取到 的可能性是几分之几？
+
+----
+输出：
 这是一个组合数学问题，我们可以通过计算组合数来解答。
 
 三种月饼都取到，即取到五仁、莲蓉和豆沙各一块。
@@ -115,12 +326,16 @@ XuanYuan-70B-Chat：
 从7块月饼中任意取出3块月饼的总的组合数为C(7,3)=35种。
 
 所以，从这7块月饼中，任意取出3块，三种月饼都取到的可能性为12/35。
-```
 
-````
-问题：实现一个Python函数以使用查找两个输入字符串的最长公共子序列"
-XuanYuan-70B-Chat:
-下面是一个用Python实现的动态规划解决方案，用于查找两个输入字符串的最长公共子序列：
+</details>
+
+<details>
+  <summary>代码编程
+  </summary>
+输入：实现一个Python函数以使用查找两个输入字符串的最长公共子序列
+
+----
+输出: 下面是一个用Python实现的动态规划解决方案，用于查找两个输入字符串的最长公共子序列：
 
 ```python
 def longest_common_subsequence(str1, str2):
@@ -157,42 +372,18 @@ def longest_common_subsequence(str1, str2):
     return ''.join(seq)
 ```
 这个函数首先初始化一个dp数组，然后填充它，最后从dp数组中获取最长公共子序列。这个解决方案的时间复杂性是O(m*n)，空间复杂性也是O(m*n)，其中m和n分别是两个输入字符串的长度。
-````
+  
+</details>
 
-## 金融评测
+**(2) 金融场景**
 
-**（1）基座模型客观评测**
+<details>
+  <summary>金融监管</summary>
 
-为了有效评估模型在金融环境中的表现，我们同时开源了[FinanceIQ：中文金融领域知识评估数据集](https://github.com/Duxiaoman-DI/XuanYuan/tree/main/FinanceIQ) ，涵盖了10个金融大类及36个金融小类，总计7173个单项选择题，且为了尽可能缓解“数据泄漏”的现象，将所有模型放在“同一起跑线”上进行客观公正地评估，我们对题目都进行了改写和人工校对，从而可以验证模型的泛化能力。
+输入：金融监管治理的四个要素是什么，并请简述每个要素的含义和重要性
 
-我们选择了当前具备代表性的多个开源和可访问模型进行评测， 其中基座模型使用5-shot来测试，结果如下：
-
-| 模型                                                                           | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
-| ------------------------------------------------------------------------------ | ------ | ---------- | ------------ | ------------ | ------------ | ------------ | ------ | ------ | ------------ | ---------- | ------ |
-| [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B)                   | 67.56  | 69.49      | 76.40        | 69.56        | 74.89        | 67.82        | 84.81  | 58.40   | 71.59        | 65.15      | 37.50  |
-| [GPT4](https://openai.com/gpt4) (0-shot)                                          | 60.05  | 52.33      | 68.72        | 64.8         | 68.81        | 68.68        | 75.58  | 46.93  | 63.51        | 63.84      | 27.27  |
-| [ErnieBot](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/jlil56u11) (0-shot)       | 55.44  | 50.8       | 64.72        | 56.38        | 60.89        | 59.48        | 74.42  | 44.26  | 56.12        | 56.68      | 30.68  |
-| [Qwen-14B](https://huggingface.co/Qwen/Qwen-14B)                                  | 53.29  | 46.76      | 63.2         | 56.38        | 58.83        | 57.76        | 69.23  | 42.62  | 56.58        | 57.65      | 23.86  |
-| [Baichuan2-13B-Base](https://github.com/baichuan-inc/Baichuan2)                   | 51.2   | 45.46      | 58.88        | 50.94        | 57.8         | 54.45        | 64.81  | 42.83  | 50.81        | 53.09      | 32.95  |
-| [Baichuan2-7B-Base](https://github.com/baichuan-inc/Baichuan2)                    | 47.35  | 39.36      | 54.56        | 45.58        | 52.64        | 51.01        | 60.58  | 38.52  | 49.42        | 51.14      | 30.68  |
-| [Baichuan-13B-Base](https://github.com/baichuan-inc/Baichuan-13B)                 | 44.49  | 39.74      | 52.8         | 43.37        | 52.29        | 48.99        | 58.85  | 33.61  | 43.65        | 53.42      | 18.18  |
-| [ChatGPT](https://openai.com/chatgpt) (0-shot)                                    | 44.2   | 34.32      | 53.12        | 44.81        | 55.05        | 49.71        | 55.19  | 31.97  | 45.27        | 49.84      | 22.73  |
-| [Qwen-7B](https://github.com/QwenLM/Qwen-7B)                                      | 41.47  | 35.7       | 49.92        | 42.35        | 48.39        | 43.1         | 57.88  | 30.12  | 42.49        | 44.3       | 20.45  |
-| [ErnieBot-Turbo](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf) (0-shot) | 40.69  | 35.49      | 48.32        | 37.76        | 44.61        | 43.53        | 50     | 32.17  | 43.88        | 44.95      | 26.14  |
-| [Chinese-LLaMA-2-13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)            | 38.65  | 32.04      | 43.36        | 40.82        | 42.09        | 45.11        | 50.38  | 31.35  | 40.65        | 39.09      | 21.59  |
-| [Baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)                        | 37.14  | 30.89      | 41.12        | 39.12        | 41.51        | 41.24        | 45.38  | 28.89  | 39.95        | 41.69      | 21.59  |
-| [LLaMA-2-13B](https://huggingface.co/meta-llama/Llama-2-13b-hf)                   | 35.09  | 32.72      | 37.6         | 37.59        | 39.68        | 37.93        | 41.15  | 27.05  | 36.03        | 38.44      | 22.73  |
-| [InternLM-7B](https://huggingface.co/internlm/internlm-7b)                        | 33.91  | 27.61      | 40           | 35.12        | 33.14        | 34.34        | 36.35  | 29.71  | 34.64        | 37.46      | 30.68  |
-| [LLaMA-2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf)                     | 31.49  | 28.3       | 31.6         | 34.44        | 32.34        | 34.63        | 35.58  | 25.82  | 30.25        | 26.71      | 35.23  |
-| [Chinese-LLaMA-2-7B](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)             | 30.82  | 28.76      | 32.64        | 36.05        | 32.8         | 32.76        | 38.08  | 22.95  | 35.33        | 28.34      | 20.45  |
-
-**（2）对话模型主观评测**
-
-我们使用XuanYuan-70B-Chat进行金融领域的对话能力的评测，下面给出一些涉及金融问答，金融计算的输出样例；
-
-```
-问题：金融监管治理的四个要素是什么，并请简述每个要素的含义和重要性
-XuanYuan-70B-Chat: 
+---
+输出: 
 金融监管治理涉及的四个核心要素是：独立性、问责制、透明度、操守。
 
 首先，独立性指的是监管机构具有一定的自主权，使其能够免受政治层面和被监管实体的干扰，以确保公平、有效地进行金融监管。监管机构的独立性不仅要求专业性技能 ，以便在复杂情况下迅速做出反应，还要求其能够使自身免受政治干预，增加监管行为的透明度和稳定性，由此提高政策制定的可信度。
@@ -204,11 +395,16 @@ XuanYuan-70B-Chat:
 最后，操守是指监管机构和监管人员需要坚守的行为与规范。良好的操守应当无私、忠诚，始终围绕着监管目标进行。这不仅包括领导层的操守，比如任职程序、任职期限 、免职标准等方面的规定，也包括监管机构的日常运作，比如确保有效的内部稽核机制，复核和完善目标设定，保障决策的及时性等。
 
 金融监管治理的四个要素相互影响、相互促进，共同构建了金融监管的基础环境。要统一提升，需要多元化的改革与整合，构建高效、公正的金融监管环境。
-```
+</details>
 
-```
-问题：货币购买力指数计算公式是什么
-XuanYuan-70B-Chat:
+<details>
+<summary>
+  货币购买力
+</summary>
+输入：货币购买力指数计算公式是什么
+
+---
+输出:
 货币购买力指数通常可以通过以下简单的公式来计算：
 
 货币购买力指数 = 1 / 物价指数
@@ -220,11 +416,16 @@ XuanYuan-70B-Chat:
 这里，CPI 是消费者价格指数，是用来衡量一篮子消费品和服务价格水平的指数。
 
 这个公式的含义在于，如果物价水平（即 CPI）上升，那么同样数量的货币购买同样的商品和服务的能力就会下降，即货币的购买力降低。反之，如果物价水平下降，那么 同样数量的货币购买同样的商品和服务的能力就会提高，即货币的购买力提高。
-```
+</details>
 
-```
-问题：银行向企业发放一笔贷款，贷款额为100万元，期限为4年，年利率为6%，试用单利和复利两种方式计算银行应得的本息和。
-XuanYuan-70B-Chat:
+<details>
+  <summary>
+    单利复利
+  </summary>
+输入：银行向企业发放一笔贷款，贷款额为100万元，期限为4年，年利率为6%，试用单利和复利两种方式计算银行应得的本息和。
+
+---
+输出:
 ### 单利计算
 
 在单利制度下，银行从企业那里得到的本息和可以通过以下方式计算：
@@ -266,27 +467,83 @@ XuanYuan-70B-Chat:
 
 - 单利下银行应得本息和为：124万元
 - 复利下银行应得本息和为：126.25万元
-```
+</details>
 
-## 模型使用
+ <details>
 
-我们已经把基座模型权重发布在HuggingFace 由于我们是基于llama2进行的增量预训练，因此可以使用llama2-hf的调用方式,  至少需要2张80G的A100/A800进行加载模型，后续我们会推出量化版本。 同时也可以基于我们的基座模型根据自身需求来进行指令微调。
-基本的使用方式：
-
-```
-import torch
-from transformers import LlamaForCausalLM, LlamaTokenizer
-
-model_name_or_path = "Duxiaoman-DI/XuanYuan-70B"
-tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
-model = LlamaForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.bfloat16,device_map="auto")
-inputs = tokenizer("问题：李时珍是哪一个朝代的人？回答：", return_tensors="pt").to("cuda")
-outputs = model.generate(**inputs, max_new_tokens=64, repetition_penalty=1.1)
-outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
-print(outputs)
-```
+  <summary> 等额本金</summary>
+输入：等额本金和等额本息有什么区别？哪个划算？
 
 ---
+输出：等额本金和等额本息是两种常见的按揭还款方式。选择哪种方式取决于借款人的实际情况和需求。
+
+首先，这两种还款方式在每月还款金额上存在区别。等额本金的还款金额是递减的，每个月偿还的本金金额固定，而利息的支付金额会随着时间推移递减。与之不同的是，等额本息的每月还款金额是固定的，但是在还款初期，偿还金额中利息所占的比例较大。
+
+其次，这两种方式产生的利息也不同。总的来说，等额本金所产生的总利息要少于等额本息。举个例子，假设贷款50万元，借款期限为一年，贷款年利率为4.35%。如果选择等额本金还款方式，总利息为2356.25元；而如果选择等额本息还款方式，总利息为2371.88元。因此，等额本金相比等额本息更加划算。
+
+最后，这两种还款方式适用的人群也有所不同。等额本金适合于早期收入较高、后期逐渐减少的借款人；而等额本息适合每月有固定收入的借款人。因此，在选择还款方式时，借款人应根据自己的收入情况和未来的规划进行综合考虑。
+
+总之，等额本金和等额本息各有优劣，并没有绝对的哪种更好或更坏。借款人应根据自身情况，权衡利弊，选择适合自己的还款方式。
+ </details>
+
+ <details>
+   <summary>派生存款</summary>
+   
+输入：某银行吸收原始存款5000万元，其中1000万元交存中央银行作为法定准备金，1000万元作为存款准备金，其余全部用于发放贷款，若无现金漏损，计算商业银行最大可能派生的派生存款总额.
+
+----
+输出：派生存款是通过货币乘数效应在银行系统中产生的存款。在这个例子中，银行首先收到了5000万元的原始存款。银行将其中的1000万元作为法定准备金交存中央银行，另外1000万元用作存款准备金。其余的3000万元用于发放贷款。
+
+货币乘数可以用以下公式计算：
+
+货币乘数 = 1 / (法定准备金率 + 存款准备金率)
+
+在这里，法定准备金率是 1000万元 / 5000万元 = 0.2，存款准备金率也是 1000万元 / 5000万元 = 0.2。
+
+因此，货币乘数 = 1 / (0.2 + 0.2) = 1 / 0.4 = 2.5
+
+接着，为了计算最大可能派生的派生存款总额，我们使用以下公式：
+
+最大可能派生的派生存款总额 = 原始存款 × 货币乘数 - 原始存款
+
+在这里，原始存款是5000万元，货币乘数是2.5。
+
+因此，最大可能派生的派生存款总额 = 5000万元 × 2.5 - 5000万元 = 12500万元 - 5000万元 = 7500万元
+
+所以，商业银行最大可能派生的派生存款总额是7500万元。
+
+ </details>
+
+ <details>
+   <summary>股票涨幅</summary>
+输入：0开头的股票涨跌幅是20%吗？
+
+---
+输出：不是的。0开头的股票属于深市股票，每个交易日的涨跌幅限制为10%。而目前，创业板（以30开头）和科创板（以688开头）股票的涨跌幅限制为20%。与之相对，沪市（以60开头）股票的涨 跌幅限制仍为10%。如果投资者希望交易创业板或科创板股票，需要先开通对应的交易权限。具体来说，创业板交易需要满足10万元及以上的资金需求，而科创板交易则需要满足50万元及以上的资金需求。因此，在进行股票交易时，投资者需要注意不同股票的涨跌幅限制和相应的资金需求。
+ </details>
+
+ <details>
+   <summary>
+     投资目标
+   </summary>
+输入：我不了解我的投资⽬标，你能帮我分析吗？可以向我提问并通过我的回答来判断
+
+-----
+输出：当然，我会尽力帮助您分析和了解您的投资目标。为了更好地理解您的情况，我会向您提出一些问题。请您认真思考并回答这些问题，这将有助于我更好地帮助您。
+
+1. 您的年龄是多少？
+2. 您的职业是什么？
+3. 您的家庭状况（例如：已婚、有子女等）是怎样的？
+4. 您的投资经验水平如何？（例如：完全没有经验、有一些经验但不太深入等）
+5. 您打算在多长时间内实现投资目标？
+6. 您希望通过投资实现什么目标？（例如：退休储蓄、购买房屋、教育基金等）
+7. 您愿意承担多大程度的投资风险？（例如：非常低风险、中等风险、高风险等）
+8. 您打算投资哪些类型的资产？（例如：股票、债券、基金、房地产等）
+9. 您有多少资金可用于投资？
+10. 您是否有专业的财务顾问或投资顾问？
+
+请认真回答这些问题，以便我更好地了解您的情况，从而为您提供更合适的投资建议。
+ </details>
 
 # 开源金融数据集
 本次开源高质量中文金融数据集FinCorpus，语料大小约60G，主要构成如下：
@@ -392,12 +649,11 @@ output = model.generate(**input, do_sample=True, temperature=0.8, top_k=50, top_
 
 # 免责声明与许可协议
 
-轩辕作为一个开源的中文金融对话模型，仅限于非商业用途的目的。该模型的设计初衷是为了促进学术研究、技术探索和个人学习等非商业领域的应用。我们鼓励学术界、开发者和研究人员使用轩辕来推动对话系统和金融领域的进步。其中，商业用途包括但不限于将轩辕用于产品、服务、咨询等与商业利益相关的活动。
-
-对于轩辕模型生成的言论，我们不承担任何责任。使用者在将轩辕应用于非商业用途时，需要自行承担潜在的风险，并始终保持审慎。我们建议用户在使用模型输出的信息时，进行独立的验证和判断，并根据个人的需求和情境进行决策。我们希望通过轩辕的开源发布，为学术界和开发者社区提供一个有益的工具，并推动对话系统和金融技术的发展。我们鼓励大家积极探索和创新，以进一步拓展和应用轩辕的潜力，并共同促进人工智能在金融领域的研究和实践。
+对于轩辕模型生成的言论，我们不承担任何责任。使用者在将轩辕模型时，需要自行承担潜在的风险，并始终保持审慎。我们建议用户在使用模型输出的信息时，进行独立的验证和判断，并根据个人的需求和情境进行决策。我们希望通过轩辕的开源发布，为学术界和工业界提供一个有益的工具，并推动对话系统和金融技术的发展。
+我们鼓励大家积极探索和创新，以进一步拓展和应用轩辕的潜力，并共同促进人工智能在金融领域的研究和实践。
 
 # 总结
 
 我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。
 
-![](resources/Wechat4.png)
+![](resources/Wechat5.png)
