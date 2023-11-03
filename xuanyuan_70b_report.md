@@ -192,7 +192,7 @@ model.save_pretrained(quant8_saved_dir)
 
 **（1） 直接使用**
 
-您可以直接下载我们量化好的4bit模型：huggingface链接
+您可以直接下载我们量化好的4bit模型。
 
 首先，如果您还未安装auto-gptq和optimum：
 
