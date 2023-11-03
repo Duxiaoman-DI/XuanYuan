@@ -117,6 +117,7 @@ XuanYuan-70B的基座模型、Chat模型以及8-bit和4bit量化模型均已发�
 ### 依赖安装
 
 ```
+CUDA >= 11.8 
 torch >= 2.0
 transformers >= 4.33.1
 accelerate
@@ -126,6 +127,7 @@ optimum(4bit量化所需)
 auto-gptq(4bit量化所需)
 vllm(推理加速所需)
 ```
+
 
 资源需求：
 
