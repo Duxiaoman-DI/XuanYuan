@@ -65,7 +65,7 @@
 XuanYuan-13B在金融评测也表现出极高的水平，以小博大获得了很好的表现。金融的主要评测指标如下：
 
 <img src="resources/13b2.png"  width="75%" />
-## 推理部署
+### 推理部署
 
 XuanYuan-13B的Chat模型已发布在Hugging Face，请根据上述的链接进行下载。下面我们给出Chat模型的推理部署使用方法。
 
