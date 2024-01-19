@@ -57,13 +57,11 @@
 ### 通用评测
 
 我们将XuanYuan-13B在通用评测中的绝大部分指标都可以与通义千问的72B相媲美，甚至是在Agent能力中远超72B，体现了轩辕13B非常强大的能力，主要评测指标如下：
-<!--![13B通用](https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b1.png)-->
 <img src="resources/13b1.png"  width="71%" />
 
 ### 金融评测
 
 XuanYuan-13B在金融评测也表现出极高的水平，媲美通义千问的72B模型，以小博大获得了很好的表现。金融的主要评测指标如下：
-<!--![13B金融](https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b2.png)-->
 <img src="resources/13b2.png"  width="75%" />
 
 ## 推理部署
