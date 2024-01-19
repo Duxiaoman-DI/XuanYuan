@@ -52,3 +52,15 @@ Examples：白日依山尽
 XuanYuan-13B在金融评测也表现出极高的水平，媲美通义千问的72B模型，以小博大获得了很好的表现。金融的主要评测指标如下：
 
 <img src="resources/13b2.png"  width="75%" />
+
+## RLHF模型训练
+除了中文增强预训练和指令微调外，我们还进行了RLHF。通过人类反馈的强化学习(RLHF)训练，提高与人类偏好进行对齐的Chat模型。相比于原始模型，RLHF对齐后的模型，在文本创作、内容生成 、指令理解与遵循、安全性等方面都有较大的提升。我们参考InstructGPT[^instructgpt]和LLaMA2[^llama2]的方法，实现了RLHF方法来使用人类偏好标注数据来进一步提高SFT模型的对齐程度。这个过程主要包含了奖励模型(Reward Model)的训练来学习人类对于当前模型的输出结果的偏好情况，以及Proximal Policy Optimization (PPO) 来进行策略学习。
+
+### Reward Model training
+为了训练有效的Reward Model来进行RLHF对齐，偏好数据的质量是非常重要的，我们在构造pair标注数据时候，基于SFT模型采用了不同的采样超参数生成出多组采样回复，并且从中选择多样性较大的回复来组成偏好标注pair；为了进一步增加偏好数据，我们进一步补充了部分由更大参数量模型生成回复来组成标注pair，这样做的目的是希望随着PPO的训练，Reward Model能够缓解部分由于actor distribution shift带来奖励分布偏移问题。在训练过程中，我们使用SFT Model作为Reward Model的参数初始化，去掉最后一层causal layer的同时，增加一层随机初始化的value layer来估计[prompt, response]的评分。我们在chosen和rejected response之后加入了special token，来指示回复的结束，并且通过计算token-level的对比损失函数来训练Reward Model。
+
+### PPO training
+PPO训练中包含了四个模型，我们使用Xuanyuan-13B-SFT模型作为actor和reference model，采用13B-SFT模型训练的Reward Model来作为Reward Model和Critic Model的初始化。
+在PPO的训练过程中，我们使用Temperature=0.7，Top_p=0.9来增加训练过程中探索生成response的多样性，这个策略有助于提升模型训练结果的稳定性。在训练过程中，我们使用1%的SFT模型的学习率来训练actor和critic model。我们将KL Reward系数设置为0.05并且标准化Reward。实验发现，过大的KL Reward系数会导致模型难以训练，而过小的KL Reward系数会导致模型容易出现reward hacking现象，从而倾向于生成更长的回复。
+
+
