@@ -26,7 +26,7 @@
 | XuanYuan-70B-8k | 🤗 [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) | 🤗 [XuanYuan-70B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) | 🤗 [XuanYuan-70B-Chat-8bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-8bit ) | 🤗  [XuanYuan-70B-Chat-4bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-4bit) |
 | XuanYuan-176B | | 🤗 [XuanYuan-176B-Chat](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
 
-技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_70b_report.md)
+技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
 
 # 目录
 - [XuanYuan-13系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-13b)
@@ -46,25 +46,25 @@
 
 主要特点：
 
-- **“以小搏大”的对话能力：**在知识理解、创造、分析和对话能力上，可与千亿级别的模型相媲美
-- **金融领域专家：**在预训练和微调阶段均融入大量金融数据，大幅提升金融领域专业能力。在金融知识理解、金融业务分析、金融内容创作、金融客服对话几大方面展示出远超一般通用模型的优异表现
-- **人类偏好对齐：**通过人类反馈的强化学习(RLHF)训练，在通用领域和金融领域均与人类偏好进行对齐
+- “以小搏大”的对话能力：在知识理解、创造、分析和对话能力上，可与千亿级别的模型相媲美
+- 金融领域专家：在预训练和微调阶段均融入大量金融数据，大幅提升金融领域专业能力。在金融知识理解、金融业务分析、金融内容创作、金融客服对话几大方面展示出远超一般通用模型的优异表现
+- 人类偏好对齐：通过人类反馈的强化学习(RLHF)训练，在通用领域和金融领域均与人类偏好进行对齐
 
 ## 模型训练与创新
 
-在模型训练中，团队在模型预训练阶段动态调整不同语种与领域知识的比例，融入了大量的专业金融语料，并在指令微调中灵活运用之前提出的Self-QA和混合训练方法，显著提升了模型在对话中的性能表现。此外，本次“轩辕13B”还通过强化学习训练，与人类偏好进行对齐。相比于原始模型，RLHF对齐后的模型，在文本创作、内容生成 、指令理解与遵循、安全性等方面都有较大的提升。模型细节请参考文档：[Report](https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/blob/master/13B.md)
+在模型训练中，团队在模型预训练阶段动态调整不同语种与领域知识的比例，融入了大量的专业金融语料，并在指令微调中灵活运用之前提出的Self-QA和混合训练方法，显著提升了模型在对话中的性能表现。此外，本次“轩辕13B”还通过强化学习训练，与人类偏好进行对齐。相比于原始模型，RLHF对齐后的模型，在文本创作、内容生成 、指令理解与遵循、安全性等方面都有较大的提升。模型细节请参考文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
 
 ### 通用评测
 
 我们将XuanYuan-13B在通用评测中的绝大部分指标都可以与通义千问的72B相媲美，甚至是在Agent能力中远超72B，体现了轩辕13B非常强大的能力，主要评测指标如下：
 <!--![13B通用](https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b1.png)-->
-<img src="https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b1.png"  width="71%" />
+<img src="resources/13b1.png"  width="71%" />
 
 ### 金融评测
 
 XuanYuan-13B在金融评测也表现出极高的水平，媲美通义千问的72B模型，以小博大获得了很好的表现。金融的主要评测指标如下：
 <!--![13B金融](https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b2.png)-->
-<img src="https://gitlab.duxiaoman-int.com/di-dxm/xuanyuan/raw/master/13b1.png"  width="75%" />
+<img src="resources/13b2.png"  width="75%" />
 
 ## 推理部署
 
