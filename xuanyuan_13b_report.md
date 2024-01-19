@@ -64,3 +64,7 @@ PPO训练中包含了四个模型，我们使用Xuanyuan-13B-SFT模型作为acto
 在PPO的训练过程中，我们使用Temperature=0.7，Top_p=0.9来增加训练过程中探索生成response的多样性，这个策略有助于提升模型训练结果的稳定性。在训练过程中，我们使用1%的SFT模型的学习率来训练actor和critic model。我们将KL Reward系数设置为0.05并且标准化Reward。实验发现，过大的KL Reward系数会导致模型难以训练，而过小的KL Reward系数会导致模型容易出现reward hacking现象，从而倾向于生成更长的回复。
 
 
+
+[^instructgpt]:Ouyang, Long, et al. "Training language models to follow instructions with human feedback." _Advances in Neural Information Processing Systems_ 35 (2022): 27730-27744.
+[^anthropic]:Bai, Yuntao, et al. "Training a helpful and harmless assistant with reinforcement learning from human feedback." _arXiv preprint arXiv:2204.05862_ (2022).
+[^llama2]: Touvron, Hugo, et al. "Llama 2: Open foundation and fine-tuned chat models." _arXiv preprint arXiv:2307.09288_ (2023).
