@@ -1,7 +1,8 @@
 <p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-🤗 <a href="https://huggingface.co/Duxiaoman-DI/XuanYuan-70B" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
+🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
+🤖 <a href="https://modelscope.cn/organization/Duxiaoman-DI" target="_blank" style="margin-left: 10px">ModelScope</a>  • 
 💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat10.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
@@ -22,9 +23,9 @@
 
 |                 | 基座模型                                                     | Chat模型                                                     | 8-bit量化Chat模型                                            | 4-bit量化Chat模型                                         |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| XuanYuan-13B | | 🤗 [XuanYuan-13B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) |  | |
-| XuanYuan-70B-8k | 🤗 [XuanYuan-70B](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) | 🤗 [XuanYuan-70B-Chat](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) | 🤗 [XuanYuan-70B-Chat-8bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-8bit ) | 🤗  [XuanYuan-70B-Chat-4bit](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-4bit) |
-| XuanYuan-176B | | 🤗 [XuanYuan-176B-Chat](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
+| XuanYuan-13B | | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat/summary) |  | |
+| XuanYuan-70B|[🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B/summary)|  [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat-4bit/summary) |
+| XuanYuan-176B | | [🤗](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
 
 技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
 
