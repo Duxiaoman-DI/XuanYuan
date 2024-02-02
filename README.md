@@ -3,7 +3,7 @@
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
 🤖 <a href="https://modelscope.cn/organization/Duxiaoman-DI" target="_blank" style="margin-left: 10px">ModelScope</a>  • 
-💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat11.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
+💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/wechat.jpg" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
 # News
@@ -1104,4 +1104,4 @@ output = model.generate(**input, do_sample=True, temperature=0.8, top_k=50, top_
 
 我们鼓励使用者在相关工作中引用轩辕，以促进知识的交流和分享，并推动中文金融对话系统的发展。轩辕的发布将为金融领域的应用和研究提供强大的支持，并为中文金融对话系统的发展做出重要贡献。我们期待看到更多的创新和应用，以提升金融服务和用户体验，并进一步推动人工智能技术在金融领域的发展。
 
-![](resources/Wechat11.jpeg)
+![](resources/wechat.jpg)
