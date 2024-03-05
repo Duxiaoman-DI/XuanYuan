@@ -1,4 +1,5 @@
-# Open LLM Flow
+## LLM-CODE
+轩辕系列模型的预训练和指令微调代码库，暨大语言模型-原理与工程实践书籍的示例代码
 ### 运行环境
 Nvidia显卡驱动版本>=525.85.12  
 CUDA版本>=12.3  
@@ -43,10 +44,10 @@ model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
 cd /your_host_workspace
 
 clone项目代码
-git clone open-llm-flow
+git clone https://github.com/Duxiaoman-DI/XuanYuan.git
 
 切换到容器内项目根目录
-cd open-llm-flow
+cd XuanYuan/llm-code
 
 删除缓存
 sh clear_cache.sh
