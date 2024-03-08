@@ -7,6 +7,8 @@
 </p>
 
 # News
+[3/8/2024] 🔥开源**XuanYuan-6B、XuanYuan-13B、XuanYuan2-70B系列模型**
+
 [1/19/2023] 🔥开源**XuanYuan-13B-Chat模型**
 
 [11/1/2023] 🔥开源**XuanYuan-70B-Chat模型及8-bit和4bit量化模型**
@@ -23,14 +25,22 @@
 
 |                 | 基座模型                                                     | Chat模型                                                     | 8-bit量化Chat模型                                            | 4-bit量化Chat模型                                         |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| XuanYuan-13B | | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat/summary) |  | |
+| XuanYuan-6B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-4bit/summary) |
+| XuanYuan-13B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-4bit/summary) |
+| XuanYuan2-70B|[🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B/summary)|  [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat-4bit/summary) |
 | XuanYuan-70B|[🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B/summary)|  [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-70B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-70B-Chat-4bit/summary) |
 | XuanYuan-176B | | [🤗](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
 
-技术文档：[Report](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
+技术文档：
+[XuanYuan-6B](xuanyuan_6b_report.md)
+[XuanYuan-13B](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
+[XuanYuan2-70B](xuanyuan2_70b_report.md)
+[XuanYuan-70B](xuanyuan_70b_report.md)
 
 # 目录
+- [XuanYuan-6系列模型](#xuanyuan-6b)
 - [XuanYuan-13系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-13b)
+- [XuanYuan2-70系列模型](#xuanyuan2-70b)
 - [XuanYuan-70系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-70b)
   - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E4%BB%8B%E7%BB%8D)   
   - [通用评测](https://github.com/Duxiaoman-DI/XuanYuan#%E9%80%9A%E7%94%A8%E8%AF%84%E6%B5%8B)
@@ -40,10 +50,80 @@
 - [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E5%BC%80%E6%BA%90%E9%87%91%E8%9E%8D%E6%95%B0%E6%8D%AE%E9%9B%86)
 - [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E8%BD%A9%E8%BE%95-176b%E9%A6%96%E4%B8%AA%E5%8D%83%E4%BA%BF%E7%BA%A7%E4%B8%AD%E6%96%87%E9%87%91%E8%9E%8D%E5%AF%B9%E8%AF%9D%E6%A8%A1%E5%9E%8B)
 
+# XuanYuan-6B
+
+## 介绍
+在轩辕系列大模型研发过程中，我们积累了大量的高质量数据和模型训练经验，构建了完善的训练平台，搭建了合理的评估流水线。在此基础上，为丰富轩辕系列模型矩阵，降低轩辕大模型使用门槛，我们进一步推出了XuanYuan-6B系列大模型。不同于XuanYuan-13B和XuanYuan-70B系列模型在LLaMA2上继续预训练的范式，XuanYuan-6B是我们从零开始进行预训练的大模型。当然，XuanYuan-6B仍采用类LLaMA的模型架构。在预训练基础上，我们构建了丰富、高质量的问答数据和人类偏好数据，并通过指令微调和强化学习进一步对齐了模型表现和人类偏好，显著提升了模型在对话场景中的表现。XuanYuan6B系列模型在多个评测榜单和人工评估中均获得了亮眼的结果。模型训练细节请参考我们的技术报告：[Report](xuanyuan_6b_report.md)
+
+本次开源的XuanYuan-6B系列模型包含基座模型XuanYuan-6B，经指令微调和强化对齐的chat模型XuanYuan-6B-Chat，以及chat模型的量化版本XuanYuan-6B-Chat-4bit和XuanYuan-6B-Chat-8bit。
+
+主要特点：
+
+* 收集多个领域大量的训练预料，进行了多维度数据清洗和去重，保证数据的量级和质量
+* 从零开始预训练，预训练中动态调整数据配比，模型基座能力较强
+* 结合Self-QA方法构建高质量问答数据，采用混合训练方式进行监督微调
+* 构建高质量人类偏好数据训练奖励模型并进行强化训练，对齐模型表现和人类偏好
+* 模型尺寸小并包含量化版本，硬件要求低，适用性更强
+* 在多个榜单和人工评估中均展现出良好的性能，具备领先的金融能力
+
+## 性能评测
+### 基础评测
+金融一直是轩辕大模型重点关注的领域和主要应用目标，因此我们首先在金融场景评测了XuanYuan-6B模型。我们使用自己构建并开源的FinanceIQ数据集，该数据集是一份专业的大模型金融能力评估数据集，涵盖了10个金融大类，36个金融小类，总计7173题。评估结果如下表所示。从表中可以看出，XuanYuan-6B模型在该评估数据中的性能甚至超越了GPT4，显示出了其强大的金融能力。
+
+| 模型          | 平均分 | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
+| ------------- | ----- | -------- | ---------- | ---------- | ----------- | --------- | ----- | ----- | ---------- | -------- | ----- |
+| XuanYuan-13B  | 74.02 | 75.29    | 83.52      | 77.38      | 80.5       | 75.86      | 87.31 | 62.09 | 76.44      | 75.25    | 46.59 |
+| XuanYuan-6B   | 68.87 | 71.62    | 77.65      | 74.83      | 77.52      | 73.56      | 86.54 | 59.02 | 70.67      | 71.19    | 26.14 |
+| GPT4          | 60.05 | 52.33    | 68.72      | 64.8       | 68.81      | 68.68      | 75.58 | 46.93 | 63.51      | 63.84    | 27.27 |
+
+除金融外，我们也注重轩辕大模型的通用能力，因此我们也在多个主流评测集上进行了模型评测，观察轩辕大模型在知识、逻辑、代码等通用能力上的表现。评测结果如下表所示。
+
+| 模型        | C-Eval | CMMLU | MMLU | GSM8K | HumanEval |
+| ----------- | ----- | ----- | ---- | ----- | --------- |
+| LLaMA2-70B  | 50.1  | 53.6  | 69.8 | 54.4  | 23.7      |
+| LLaMA2-13B  | 41.4  | 38.4  | 55   | 29.6  | 18.9      |
+| LLaMA2-7B   | 32.5  | 31.8  | 46.8 | 16.7  | 12.8      |
+|XuanYuan-13B | 82    | 78    | 70.3 | 49.3  | 29.3      |
+| XuanYuan-6B | 81.2  | 75.8  | 64.5 | 32.9  | 22.6      |
+
+从表中结果可以看出，在五个评测集上，XuanYuan-6B的表现均超越了类似尺寸的LLaMA2-7B和LLaMA2-13B模型，展现出了强大的通用能力。在中文相关场景下，XuanYuan-6B甚至可超越更大尺寸的LLaMA2-70B模型。
+
+值得注意的是，在上述所有评测中，XuanYuan-6B均进行了考试场景增强，具体细节可见我们的技术报告。另外榜单结果也不代表模型在真实场景中的实际能力。为进一步验证模型的实际能力，我们对模型进行了人工评测。
+
+### 人工评测
+除在各榜单进行评测外，我们进一步对XuanYuan-6B-Chat模型进行了人工评估，来公正客观地评估chat模型在对话场景中的真实能力。评估集包含一定量级的问题且对研发人员完全封闭，每个问题均由三个不同的人员进行评估来减轻偏见。评估对比对象为业界开源的类似尺寸的主流大模型，我们并采用GSB（Good，Same，Bad）指标来展示评估结果，具体结果如下图所示。从图中可以看出，在通用性（安全性在评估时被纳入了通用性）和金融能力上，XuanYuan-6B-Chat模型均超过了对比对象，显示出更强的模型能力。
+
+<img src=resources/6b_vs_other.jpg width=80%>
+
+## 推理部署
+XuanYuan-6B系列模型均已上传到HuggingFace和modelscope网站，请点击上述链接进行下载。XuanYuan-6B基座模型、chat模型及其量化模型的使用方法和[XuanYuan-70B](#xuanyuan-70b)，[XuanYuan2-70B](#xuanyuan2-70b)类似，但是tokenizer加载方式和在对话场景中使用的prompt格式不同（不包含system message）。下面以XuanYuan-6B-Chat模型为例，来展示XuanYuan-6B系列模型的使用方法。
+```python
+import torch
+from transformers import LlamaForCausalLM, AutoTokenizer
+
+model_name_or_path = "Duxiaoman-DI/XuanYuan-70B-Chat"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path, device_map="auto")
+model.eval()
+
+seps = [" ", "</s>"]
+roles = ["Human", "Assistant"]
+
+content = "介绍下你自己"
+prompt = seps[0] + roles[0] + ": " + content + seps[0] + roles[1] + ":"
+print(f"输入: {content}")
+inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=256, do_sample=True, temperature=0.7, top_p=0.95)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(f"输出: {outputs}")
+```
+
+
 # XuanYuan-13B
 
 ## 介绍
-最懂金融领域的开源大模型“轩辕”系列，继176B、70B之后推出更小参数版本——XuanYuan-13B。这一版本在保持强大功能的同时，采用了更小的参数配置，专注于提升在不同场景下的应用效果。我们将在之后继续推出XuanYuan-13B量化版本，请大家关注我们的主页获取最新消息🌟。
+最懂金融领域的开源大模型“轩辕”系列，继176B、70B之后推出更小参数版本——XuanYuan-13B。这一版本在保持强大功能的同时，采用了更小的参数配置，专注于提升在不同场景下的应用效果。同时，我们也开源了XuanYuan-13B-Chat模型的4bit和8bit量化版本，降低了硬件需求，方便在不同的设备上部署。
 
 主要特点：
 
@@ -57,7 +137,9 @@
 
 ### 通用评测
 
-我们正在对XuanYuan-13B的基座模型进行各项指标的测评，近期将会在主页更新，请大家点亮star持续关注。我们非常关注模型在实际对话中的能力，组建专业的人工评测团队将XuanYuan-13B与其他开源系列的70B左右参数模型进行GSB比较，结果显示：在通用评测中的绝大部分指标，XuanYuan-13B都可以与其他开源系列的70B左右参数模型相媲美，主要评测指标如下（轩辕vs其他）：
+XuanYuan-13B在各评测集（通用评测、金融评测）上的结果已在[XuanYuan-6B](#xuanyuan-6b)的评测内容中给出，请参考。从评测结果来看，XuanYuan-13B具备很强的通用能力和金融能力，其性能甚至可比肩更大尺寸的模型，做到了以小搏大。和XuanYuan-6B类似，XuanYuan-13B在评测中也进行了考试场景优化。此外，由于评测集是固定且有限的，因此相关评测结果并不完全代表模型的真实能力。
+
+除在固定测试集进行评估外，我们非常关注模型在实际对话中的能力，组建专业的人工评测团队将XuanYuan-13B与其他开源系列的70B左右参数模型进行GSB比较，结果显示：在通用评测中的绝大部分指标，XuanYuan-13B都可以与其他开源系列的70B左右参数模型相媲美，主要评测指标如下（轩辕vs其他）：
 
 <img src="resources/13b1.png"  width="71%" />
 
@@ -481,6 +563,131 @@ POST /InvestmentAdvice?user_id={user_id}&risk_profile={risk_profile}&investment_
 综上所述，销售毛利占销售额的比例增加通常会提高公司的盈利能力。然而，还需要考虑其他因素，如销售、总务和行政开支的增加，以及市场竞争等因素。投资者可以通过进一步分析这些因素来评估公司的整体盈利能力和未来发展潜力。
 </details>
 
+# XuanYuan2-70B
+
+## 介绍
+
+XuanYuan2-70B系列模型是在XuanYuan-70B基座模型基础上，使用更多高质量的语料进行继续预训练和指令微调，并进行基于人类反馈的强化训练而得到。相比第一代XuanYuan-70B系列模型，第二代模型在通用性、安全性和金融能力上都得到了明显提高，模型输出更加符合人类偏好。同时，第二代模型支持的上下文长度达到16k，能够更好处理长文本输入，适用范围更为广泛。模型细节请参考文档：[Report](xuanyuan2_70b_report.md)
+
+XuanYuan2-70B系列共包含4个模型，包括基座模型XuanYuan2-70B，chat模型XuanYuan2-70B-Chat，chat模型的量化版本XuanYuan2-70B-Chat-8bit和XuanYuan2-70B-Chat-4bit。
+
+主要特点：
+
+- 使用更多高质量的数据进行继续预训练和指令微调，各项能力持续提升
+- 支持的上下文长度达到了16k，使用范围更广
+- 基于人类的反馈信息进行强化训练，进一步对齐了人类偏好
+
+## 性能评测
+类似XuanYuan-70B，我们也对XuanYuan2-70B进行了通用性评测和金融评测。
+
+### 通用评测
+通用评测的目标是观察XuanYuan2-70B在使用更多高质量数据进行继续预训练后，英文能力是否得到了保持，中文能力是否得到了增强。同样，我们也选择MMLU来测试模型在英文场景下的通用能力，同时使用CEVAL和CMMLU来测试模型在中文场景下的各项能力。评测结果如下表所示。从表中可以看出，相比XuanYuan-70B，XuanYuan2-70B的中文能力得到了进一步提升，同时英文能力也没有出现明显的下降，整体表现符合预期。这一方面证明了我们所做的各项优化的有效性，另一方面也显示出了XuanYuan2-70B强大的通用能力。值得注意的是，榜单结果并不完全代表模型的实际性能表现，即便在CEVAL和CMMLU上我们的评测结果超过了GPT4，但实际中我们模型的表现和GPT4还存在明显的差距，我们将继续优化和提升轩辕模型的各项能力。
+
+| 模型          | MMLU       | CEVAL    | CMMLU     |
+| ------------- | --------- | -------- | --------- |
+| LLaMA2-70B    | 68.9      | 52.1     | 53.11     |
+| XuanYuan-70B  | 70.9      | 71.9     | 71.10     |
+| XuanYuan2-70B | 70.8      | **72.7** | **72.7**  |
+| GPT4          | **83.93** | 68.4     | 70.95     |
+
+### 金融评测
+我们在FinanceIQ上评测了模型的金融能力。FinanceIQ是一个专业的金融领域评测集，其涵盖了10个金融大类及36个金融小类，总计7173个单项选择题，某种程度上可客观反应模型的金融能力。评测结果如下表所示。从表中结果可以看出，经过继续优化训练后，XuanYuan2-70B的综合金融能力得到了进一步提升，这再次证明了我们所做的一系列优化的有效性。同时我们也发现一些细分类目上模型的能力出现了一定程度的退化，这说明模型仍存在一定的优化空间，我们将继续优化提升轩辕模型的金融能力。
+
+| 模型          | 平均分     | 注册会计师 | 银行从业资格 | 证券从业资格 | 基金从业资格 | 保险从业资格 | 经济师 | 税务师 | 期货从业资格 | 理财规划师 | 精算师 |
+| ------------- | --------- | -------- | ---------- | ---------- | ----------- | --------- | ----- | ----- | ---------- | -------- | ----- |
+| XuanYuan-70B  | 67.56     | 69.49    | 76.40      | 69.56      | 74.89      | 67.82      | 84.81 | 58.4  | 71.59      | 65.15    | 37.50 |
+| XuanYuan2-70B | **67.83** | 68.63    | 69.72      | 79.1       | 71.51      | 69.68      | 84.81 | 58.2  | 72.98      | 71.86    | 31.82 |
+| GPT4          | 60.05     | 52.33    | 68.72      | 64.8       | 68.81      | 68.68      | 75.58 | 46.93 | 63.51      | 63.84    | 27.27 |
+
+
+
+## 推理部署
+
+XuanYuan2-70B系列模型的硬件需求、软件依赖、Base及Chat模型使用方法和XuanYuan-70B系列模型一致。请参考本页面[XuanYuan-70B](#xuanyuan-70b)系列模型的介绍内容。
+
+为降低硬件需求，我们也提供了XuanYuan2-70B-Chat模型的8bit和4bit量化版本。
+
+### 8bit模型
+在8bit量化算法上，我们使用目前社区广泛使用的bitsandbytes库。经测试，8bit量化对模型的性能损失很低。8bit模型的使用方式如下所示（需注意promopt格式，我们在训练时设置了system message）：
+
+```python
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+model_name_or_path = "/your/model/path"
+tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path,torch_dtype=torch.float16, device_map="auto")
+
+system_message = "以下是用户和人工智能助手之间的对话。用户以Human开头，人工智能助手以Assistant开头，会对人类提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与 与不道德、不安全、有争议、政治敏感等相关的话题、问题和指示。\n"
+seps = [" ", "</s>"]
+roles = ["Human", "Assistant"]
+
+content = "介绍下你自己"
+prompt = system_message + seps[0] + roles[0] + ": " + content + seps[0] + roles[1] + ":"
+print(f"输入: {content}")
+
+inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=256, repetition_penalty=1.1)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(f"输出: {outputs}")
+```
+### 4bit模型：
+在4bit量化算法上，我们使用[auto-gptq](https://github.com/PanQiWei/AutoGPTQ)工具。4bit模型使用方式如下所示，同样，需要对齐我们的prompt格式：
+
+```python
+import torch
+from transformers import LlamaForCausalLM, LlamaTokenizer
+from auto_gptq import AutoGPTQForCausalLM
+
+model_name_or_path = "/your/model/path"
+tokenizer = LlamaTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = AutoGPTQForCausalLM.from_quantized(model_name_or_path,torch_dtype=torch.float16, device_map="auto")
+
+system_message = "以下是用户和人工智能助手之间的对话。用户以Human开头，人工智能助手以Assistant开头，会对人类提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与 与不道德、不安全、有争议、政治敏感等相关的话题、问题和指示。\n"
+seps = [" ", "</s>"]
+roles = ["Human", "Assistant"]
+
+content = "介绍下你自己"
+prompt = system_message + seps[0] + roles[0] + ": " + content + seps[0] + roles[1] + ":"
+print(f"输入: {content}")
+inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+outputs = model.generate(**inputs, max_new_tokens=256, repetition_penalty=1.1)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(f"输出: {outputs}")
+```
+
+### 在vLLM下使用4bit模型：
+普通HuggingFace的推理脚本运行gptq量化的4bit模型时，推理的速度很慢，并不实用。而最新版本的vLLM已经支持包含gptq在内的多种量化模型的加载，vLLM依靠量化的加速算子以及pagedAttention，continue batching以及一些调度机制，可以实现至少10倍的推理吞吐的提升。
+
+您可以安装最新版本的vLLM并使用以下脚本使用我们的4bit量化模型：
+```python
+from vllm import LLM, SamplingParams
+
+sampling_params = SamplingParams(temperature=0.7, top_p=0.95,max_tokens=256)
+llm = LLM(model="/your/model/path", quantization="gptq", dtype="float16")
+
+system_message = "以下是用户和人工智能助手之间的对话。用户以Human开头，人工智能助手以Assistant开头，会对人类提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与 与不道德、不安全、有争议、政治敏感等相关的话题、问题和指示。\n"
+seps = [" ", "</s>"]
+roles = ["Human", "Assistant"]
+
+content = "介绍下你自己"
+prompt = system_message + seps[0] + roles[0] + ": " + content + seps[0] + roles[1] + ":"
+print(f"输入: {content}")
+result = llm.generate(prompt, sampling_params)
+result_output = [[output.outputs[0].text, output.outputs[0].token_ids] for output in result]
+print(f"输出：{result_output[0]}")
+```
+
+### 生成速度评估
+我们测试了不同模型（量化前和量化后）在不同推理方式（HuggingFace、vLLM）下的生成速度，结果如下所示：
+
+* 全量70B模型推理吞吐是： 8.26 token/s
+* 4bit 70B模型推理吞吐是： 0.70 token/s
+* 8bit 70B模型推理吞吐是： 3.05 token/s
+* 4bit 70B模型vllm推理吞吐是： 60.32 token/s
+* 全量70B模型vllm推理吞吐是： 41.80 token/s
+
+在所有测试中，我们均设置batchsize=1。上述前三项都是普通HuggingFace推理脚本的测试结果，可以看到量化后模型推理速度并无提升。最后两项是vLLM的推理测试结果，比起HuggingFace推理，可以看出vLLM可用性更高，模型生成速度均有显著提升。
 
 # XuanYuan-70B
 
