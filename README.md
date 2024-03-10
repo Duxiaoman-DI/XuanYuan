@@ -7,7 +7,7 @@
 </p>
 
 # News
-[3/8/2024] 🔥开源**XuanYuan-6B、XuanYuan-13B、XuanYuan2-70B系列模型**
+[3/11/2024] 🔥开源**XuanYuan-6B、XuanYuan-13B、XuanYuan2-70B系列模型**
 
 [1/19/2023] 🔥开源**XuanYuan-13B-Chat模型**
 
