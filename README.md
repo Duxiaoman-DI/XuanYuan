@@ -1,4 +1,4 @@
-!<p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
+<p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
