@@ -1,9 +1,9 @@
-<p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
+<img width="333" alt="image" src="https://github.com/user-attachments/assets/9b7d2a2c-d39a-45bd-abba-8bf7e913234a"><p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
 🤖 <a href="https://modelscope.cn/organization/Duxiaoman-DI" target="_blank" style="margin-left: 10px">ModelScope</a>  • 
-💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat07.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
+💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat08.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
 # News
