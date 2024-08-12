@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4b19911f-bd8d-45ea-a2b4-e25b5c8e24a3)![image](https://github.com/user-attachments/assets/6e13be8b-d8b9-42b6-b6cf-460985c96d6b)<p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
+<p align="center"> <img src="resources/title_logo.jpg" style="width: 40%;" id="title-icon">  </p>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
