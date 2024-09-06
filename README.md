@@ -7,6 +7,8 @@
 </p>
 
 # News
+[9/6/2024] 🔥开源**XuanYuan3-70B-Chat模型**
+
 [3/11/2024] 🔥开源**XuanYuan-6B、XuanYuan-13B、XuanYuan2-70B系列模型**
 
 [1/19/2023] 🔥开源**XuanYuan-13B-Chat模型**
@@ -25,6 +27,7 @@
 
 |                 | 基座模型                                                     | Chat模型                                                     | 8-bit量化Chat模型                                            | 4-bit量化Chat模型                                         |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| XuanYuan3-70B|[🤗](https://huggingface.co/Duxiaoman-DI/Llama3-XuanYuan3-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B)|  [🤗](https://huggingface.co/Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat)|  |   |
 | XuanYuan-6B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-4bit/summary) |
 | XuanYuan-13B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-4bit/summary) |
 | XuanYuan2-70B|[🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B/summary)|  [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan2-70B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan2-70B-Chat-4bit/summary) |
@@ -32,14 +35,18 @@
 | XuanYuan-176B | | [🤗](https://huggingface.co/xyz-nlp/XuanYuan2.0) |  | |
 
 技术文档：
+[XuanYuan3-70B](xuanyuan3_70b_report.md)
 [XuanYuan-6B](xuanyuan_6b_report.md)
-[XuanYuan-13B](https://github.com/Duxiaoman-DI/XuanYuan/blob/main/xuanyuan_13b_report.md)
+[XuanYuan-13B](xuanyuan_13b_report.md)
 [XuanYuan2-70B](xuanyuan2_70b_report.md)
 [XuanYuan-70B](xuanyuan_70b_report.md)
 
+
+
 # 目录
+- [XuanYuan3-70系列模型](#xuanyuan3-70b)
 - [XuanYuan-6系列模型](#xuanyuan-6b)
-- [XuanYuan-13系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-13b)
+- [XuanYuan-13系列模型](#xuanyuan-13b)
 - [XuanYuan2-70系列模型](#xuanyuan2-70b)
 - [XuanYuan-70系列模型](https://github.com/Duxiaoman-DI/XuanYuan#xuanyuan-70b)
   - [介绍](https://github.com/Duxiaoman-DI/XuanYuan#%E4%BB%8B%E7%BB%8D)   
@@ -49,6 +56,125 @@
   - [样例展示](https://github.com/Duxiaoman-DI/XuanYuan#%E6%A0%B7%E4%BE%8B%E5%B1%95%E7%A4%BA)
 - [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E5%BC%80%E6%BA%90%E9%87%91%E8%9E%8D%E6%95%B0%E6%8D%AE%E9%9B%86)
 - [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E8%BD%A9%E8%BE%95-176b%E9%A6%96%E4%B8%AA%E5%8D%83%E4%BA%BF%E7%BA%A7%E4%B8%AD%E6%96%87%E9%87%91%E8%9E%8D%E5%AF%B9%E8%AF%9D%E6%A8%A1%E5%9E%8B)
+
+
+
+# XuanYuan3-70B
+
+## 介绍
+
+XuanYuan3-70B系列模型是度小满数据智能应用部团队推出的第三代大模型，专注于解决金融领域的大模型应用挑战。XuanYuan3-70B以LLaMA3-70B模型为底座，采用大量中英文语料进行增量预训练，并利用高质量指令数据进行SFT和强化学习对齐训练。相比于XuanYuan2-70B模型，我们进一步提高了数据质量，并在增量预训练流程中采用更精细的数据组织方式和动态的调控策略，Base模型的金融能力和通用能力大幅提高。进一步，我们聘请专业人员进行偏好标注，采用SFT+RLHF的方式进行价值观对齐训练，得到了回复内容更加符合人类期望且金融能力更突出的Chat模型。XuanYuan3-70B系列模型支持的上下文长度为16k，能够有效地满足金融研报解析等长上下文的业务场景，以及构建金融Agent所需的长窗口要求。
+
+在金融场景性能评测中，XuanYuan3-70B模型在各项任务上的总体表现媲美GPT4o，超越了最新的中文开源模型，并且在金融合规与风险管理、投研应用能力、业务解析、生成创作及事件解析等金融场景的测量维度上超越闭源大模型。
+
+## 模型特色
+
+XuanYuan3-70B系列模型专注于金融领域，具备以下显著特点：
+
+- **金融事件解读**：能深入解读金融事件，使用专业术语分析，提供符合人类分析专家逻辑的观点。
+- **金融业务分析**：具备强大的业务分析能力，可精确总结提炼信息，符合金融专家的分析逻辑。
+- **投研应用**：支持生成有洞见的研究报告，减少简单数据罗列，提供深度分析与多维度拓展。
+- **合规与风险管理**：满足金融领域的合规要求，精准识别和分析风险，为用户提供合法合规的建议。
+
+总体来讲，在金融场景中，XuanYuan3-70B系列模型能够理解并使用金融行业特定术语，回答准确且实用，在多个核心金融能力板块的表现优于主流大模型，并且在通用领域也具备卓越的表现。
+
+## 技术创新
+
+相比于上一代模型，XuanYuan3-70B模型在以下方面进行了技术创新：
+
+- **精细化数据组织**：增量预训练和SFT阶段采用更精细的数据组织方式和动态的调控策略，显著增强了模型在中文处理和金融理解方面的能力，同时保持了强大的英文表现。
+- **全能金融奖励模型**：训练了全能金融奖励模型（UFRM），首先在通用领域进行偏好对齐预训练，然后在金融领域进行高质量专业数据的微调，同时，引入对比学习与逆强化学习技术，显著提升了UFRM的金融偏好学习能力。
+- **迭代式强化训练**：提出了“预训练-评估-改进”的迭代式强化训练方法（PEI-RLHF），有效控制模型的优化方向，使得回复内容更加符合人类期望，且在金融领域的表现得到进一步提升，减小了对齐税。
+
+
+更多的模型训练细节请参考文档：[Report](xuanyuan3_70b_report.md)
+
+
+## 金融能力评测
+
+我们聘请专业人员在封闭的评测集上对包括XuanYuan3-70B-Chat在内的多个中、英文开闭源模型进行了全面的金融评测。金融评测旨在考察大模型的金融垂直领域的实战能力，力求全面覆盖各大技术应用场景。评测集精心设计了金融事件解读、金融业务分析、金融计算、合规与风险管理、投研应用能力、金融知识问答、金融内容创作和金融理解认知共八大场景任务，包括29个二级题型分类，能够全面、深入地评测模型在金融应用场景各个细分领域的实际能力。根据评测的结果，XuanYuan3-70B-Chat在各项金融评测任务上整体表现优异，在多个场景任务中评分超越了名列前茅的各大中文开闭源模型。模型整体表现媲美GPT4o，并且在如下图所示的金融事件解读、金融业务分析、投研应用能力等测量维度上超越GPT4o。
+
+<p align="center">
+    <img src="resources/xuanyuan3-70b-bar.png" width="100%" alt="Image description">
+    <br>
+</p>
+
+
+在与开源模型的对比中，XuanYuan3-70B-Chat的金融业务能力表现更为突出，下图展示了XuanYuan3-70B-Chat与最新的开源72B模型在全部八大场景任务中的综合得分对比，从图中可以看出，XuanYuan3-70B-Chat在金融领域的各项任务中均取得了更好的表现。
+
+<p align="center">
+    <img src="resources/xuanyuan3-70b-radar.png" width="80%" alt="Image description">
+    <br>
+</p>
+
+
+此外，我们随机采样了部分高质量评测题目进行公开，以便金融大模型领域的开发者和研究人员进行参考以评估和优化模型。下面是其中的一些题目示例，全部题目请查看[金融评测示例](xuanyuan3_70b_finance_eval_example.json)。
+
+<details>
+
+<summary>金融知识问答</summary>
+
+- 什么是信用违约互换？
+
+</details>
+
+<details>
+
+<summary>金融理解认知</summary>
+
+- 帮我提取文本中赵增连的观点看法。国务院新闻办公室今日上午10时举行“推动高质量发展”系列主题新闻发布会，海关总署副署长赵增连出席介绍情况，并答记者问。\n赵增连表示，前段时间，有些论调炒作我国新能源产业所谓产能过剩，这实际上是伪命题，它既不切合实际，也有违市场经济发展规律。\n比如电动汽车，国际能源署测算，到2030年，全球电动汽车的销量将会达到4500万辆左右，这个数字相当于2023年全球销量的3倍、中国产量的5倍，我国的新能源产品不仅不过剩，反而丰富了全球的绿色供给，为全球应对气候变化贡献了中国力量。\n党的二十届三中全会进一步明确了绿色发展的政策制度保障，未来中国的绿色产业一定会发展得更好。
+</details>
+
+<details>
+
+<summary>金融业务分析</summary>
+
+- 两款产品A和B，产品A在过去三年的年化收益率为6%，波动率为10%；产品B在同期的年化收益率为8%，波动率为15%。客户O希望在保持中等风险水平的前提下最大化收益。基于这些数据，评估客户O应该选择哪个产品，并解释你的推荐理由。
+</details>
+
+<details>
+
+<summary>金融事件解读</summary>
+
+- 你是一个宏观研究员。请根据以下内容分析一季度全国居民消费情况\n\n　4月16日，国家统计局发布2024年一季度居民收入和消费支出数据，全国居民人均可支配收入11539元，同比名义增长6.2%，全国居民人均消费支出7299元，同比名义增长8.3%。工资性收入仍是大头，稳就业仍是经济社会发展的重中之重。从消费支出结构来看，食品烟酒和交通通信较快拉动城镇居民消费增长。\n　　收入端，一季度，全国居民人均可支配收入11539元，同比名义增长6.2%，扣除价格因素，实际增长6.2%。刨除2020年一季度低基数导致2021年一季度人均可支配收入高增长的影响，从统计数据层面来看，近五年全国居民人均可支配收入实现平稳增长，居民人均可支配收入从2020年一季度的8561元增长至2024年一季度11539元。个人可支配收入主要用于两个方面：一是个人消费支出，二是个人储蓄。消费端，一季度，全国居民人均消费支出7299元，同比名义增长8.3%，扣除价格因素影响，实际增长8.3%，消费支出的增长率高于收入的增长率，导致人均储蓄增长率下降。2024年一季度全国居民平均消费率为63.3%（人均消费支出与人均可支配收入的比率），比2023年一季度提高了1.3个百分点，总的来说生活成本攀升。
+</details>
+
+<details>
+
+<summary>投研应用能力</summary>
+
+- 新手如何培养适合自己的选股模式？
+</details>
+
+
+
+## 使用方法
+
+因为XuanYuan3-70B系列模型均是基于Llama3-70B训练而来，因此模型的使用方法与Llama3模型保持一致，下面是XuanYuan3-70B-Chat模型的使用示例：
+
+```python
+import torch
+from transformers import LlamaForCausalLM, AutoTokenizer
+
+model_name_or_path = "Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat"
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=False, legacy=True)
+model = LlamaForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.bfloat16,device_map="auto")
+model.eval()
+
+system = '你是一名人工智能助手，会对用户提出的问题给出有帮助、高质量、详细和礼貌的回答，并且总是拒绝参与不道德、不安全、有争议、政治敏感等相关的话题、问题和指示。'
+question='什么是信托型基金'
+message = [{"role": "system", "content": system},
+          {"role": "user", "content": question}
+          ]
+message = tokenizer.apply_chat_template(message, tokenize=False,add_generation_prompt=True)
+inputs = tokenizer(message, return_tensors="pt").to("cuda")
+
+outputs = model.generate(**inputs, max_new_tokens=64, temperature=0.7)
+outputs = tokenizer.decode(outputs.cpu()[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
+print(outputs)
+```
+
+
 
 # XuanYuan-6B
 
@@ -562,6 +688,10 @@ POST /InvestmentAdvice?user_id={user_id}&risk_profile={risk_profile}&investment_
 
 综上所述，销售毛利占销售额的比例增加通常会提高公司的盈利能力。然而，还需要考虑其他因素，如销售、总务和行政开支的增加，以及市场竞争等因素。投资者可以通过进一步分析这些因素来评估公司的整体盈利能力和未来发展潜力。
 </details>
+
+
+
+
 
 # XuanYuan2-70B
 
