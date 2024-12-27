@@ -4,11 +4,13 @@
 🤗 <a href="https://huggingface.co/Duxiaoman-DI" target="_blank" style="margin-left: 10px">HuggingFace</a>  • 
 🤖 <a href="https://modelscope.cn/organization/Duxiaoman-DI" target="_blank" style="margin-left: 10px">ModelScope</a>  • 
 🟣 <a href="https://www.wisemodel.cn/organization/Duxiaoman-XuanYuan" target="_blank" style="margin-left: 10px">wisemodel</a>  • 
-💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/Wechat0812.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
+💬 <a href="https://github.com/Duxiaoman-DI/XuanYuan/blob/main/resources/WechatIMG1227.jpeg" target="_blank"  style="margin-left: 10px">WeChat</a>   
 </p>
 
 # News
-[9/6/2024] 🔥开源**XuanYuan3-70B系列模型**
+[12/27/2024]🔥开源**XuanYuan-FinX1-Preview推理大模型**
+
+[9/6/2024]    🔥开源**XuanYuan3-70B系列模型**
 
 [3/11/2024] 🔥开源**XuanYuan-6B、XuanYuan-13B、XuanYuan2-70B系列模型**
 
@@ -28,6 +30,7 @@
 
 |                 | 基座模型                                                     | Chat模型                                                     | 8-bit量化Chat模型                                            | 4-bit量化Chat模型                                         |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| XuanYuan-FinX1-Preivew |  | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-FinX1-Preview) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-FinX1-Preview) [🟣]( https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-FinX1-Preview) |  |  |
 | XuanYuan3-70B|[🤗](https://huggingface.co/Duxiaoman-DI/Llama3-XuanYuan3-70B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B) [🟣]( https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B)|  [🤗](https://huggingface.co/Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat) [🟣]( https://modelscope.cn/models/Duxiaoman-DI/Llama3-XuanYuan3-70B-Chat)|  |   |
 | XuanYuan-6B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-6B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-6B-Chat-4bit/summary) |
 | XuanYuan-13B | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat/summary)| [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-8bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-8bit/summary) | [🤗](https://huggingface.co/Duxiaoman-DI/XuanYuan-13B-Chat-4bit) [🤖](https://modelscope.cn/models/Duxiaoman-DI/XuanYuan-13B-Chat-4bit/summary) |
@@ -45,6 +48,7 @@
 
 
 # 目录
+- [XuanYuan-FinX1-Preview推理模型](https://github.com/Duxiaoman-DI/XuanYuan#XuanYuan-FinX1-Preview)
 - [XuanYuan3-70系列模型](#xuanyuan3-70b)
 - [XuanYuan-6系列模型](#xuanyuan-6b)
 - [XuanYuan-13系列模型](#xuanyuan-13b)
@@ -58,6 +62,89 @@
 - [开源金融数据集](https://github.com/Duxiaoman-DI/XuanYuan#%E5%BC%80%E6%BA%90%E9%87%91%E8%9E%8D%E6%95%B0%E6%8D%AE%E9%9B%86)
 - [XuanYuan-176B](https://github.com/Duxiaoman-DI/XuanYuan#%E8%BD%A9%E8%BE%95-176b%E9%A6%96%E4%B8%AA%E5%8D%83%E4%BA%BF%E7%BA%A7%E4%B8%AD%E6%96%87%E9%87%91%E8%9E%8D%E5%AF%B9%E8%AF%9D%E6%A8%A1%E5%9E%8B)
 
+
+
+# XuanYuan-FinX1-Preview
+
+## 介绍
+
+轩辕-FinX1是金融领域首个类GPT-O1推理大模型，采用创新的**“思维链+过程奖励+强化学习”**训练范式，显著提升逻辑推理能力，并可展示O1模型未公开的完整思考过程，为金融决策提供更深入的洞察。轩辕-FinX1针对**金融场景中的分析、决策和数据处理任务**进行了深度优化。轩辕-FinX1由度小满AI-Lab研发，本次发布的是预览版本，现已在开源社区开放**免费下载**。后续优化版本也将持续开源，供用户下载使用。
+
+轩辕-FinX1能够在生成回答前先呈现完整的思考过程，构建从问题拆解到最终结论的全透明思维链，如下图所示：
+
+![case](resources/example.gif)
+
+
+## 技术路线
+
+为了实现大模型具备类O1的推理能力，尤其是在金融领域复杂的决策分析场景中，我们经过大量的探索和验证，提出包含三个关键步骤的技术方案：构建稳定的思维链生成模型、金融决策加强的双奖励模型、PRM和ORM双引导下的强化学习微调。
+
+### 初步构建稳定的思维链生成模型
+针对金融领域复杂的决策分析场景，我们构建了具备稳定思维链生成能力的基础模型。首先是高质量COT/Answer的数据合成，先根据问题生成思考过程，再根据问题与思考过程生成最终答案。通过这种策略，模型能够专注于每个阶段的任务，产生更连贯的推理链条和答案。
+对于不同领域（如数学、逻辑推理、金融分析等），我们设计了专门的数据合成方法，比如对于金融分析类任务，我们设计一种迭代式合成方法，确保分析过程全面性，之后基于XuanYuan3.0模型采用指令微调进行训练，采用统一的<thinking>思考过程</thinking> <answer>答案</answer>输出格式(我们本次也会将粗粒度的思考节点进行公开），同时重点构造了较多的长文本数据来增强模型的长上下文处理能力，使其能够“先生成详细的思考过程，再生成答案”，这为后续的过程监督训练和强化学习优化奠定了坚实基础。
+### 金融决策加强的双奖励模型
+为了评估模型在金融决策场景下的表现，我们设计了结果导向(ORM)和过程级(PRM)两个互补的奖励模型。其中ORM延续了XuanYuan3.0的技术方案，采用对比学习和逆强化学习的方式训练；PRM则是我们针对推理过程的创新，重点解决了开放性金融问题（如市场分析、投资决策等）的评估难题。对于PRM的训练数据构建，我们针对不同场景采用了不同策略：对于风险评级等有确定答案的问题，使用基于MCTS的反向验证方法；对于开放性的金融分析问题，则通过多个大模型从正确性、必要性、逻辑性等维度进行标注，并通过下采样和主动学习解决了数据不平衡问题。在训练过程中，PRM使用有监督微调方式，通过对每个思考步骤的评分来优化模型。
+### PRM和ORM双引导下的强化学习微调
+在强化学习阶段，我们采用PPO算法进行模型优化，将PRM和ORM作为奖励信号。对于<thinking>和</thinking>之间的思考过程，使用PRM在每个思考步骤进行打分，及时发现和纠正思考路径中的错误；对于答案部分，则针对不同类型的问题采用不同的评估策略：对有确定答案的金融问题（如风险等级评估）采用规则匹配计算奖励，对开放性问题（如市场分析）则使用ORM进行整体评分。在训练过程中同时引入了动态KL系数和优势函数归一化等技术来稳定训练过程。这种基于双重奖励的训练机制，不仅克服了单一奖励模型的局限性，也通过稳定的强化学习训练显著提升了模型在金融决策场景下的推理能力。
+
+可以看出，上述路线中的关键是对不同于数学或者逻辑的金融分析类开放问题的思维链数据的构造和奖励模型的评估，目前我们仍在仍在不断优化和迭代，会持续探索更有效的技术路线。
+
+## 使用方法
+本次开源的模型按照`<thinking>思考过程</thinking> <answer>答案</answer>`的输出格式进行输出，在思考过程中，同时我们也保留了粗粒度的思考步骤节点，使用◆进行分割。
+模型支持VLLM进行推理加速，代码示例如下：
+
+```python
+# -*- coding: utf-8 -*-
+
+from vllm import LLM, SamplingParams
+import transformers
+
+model_path = "XuanYuan-FinX1-Preview"
+system_message = "你是一位擅长深度思考的助手。在回答问题之前，你会像人类一样展现出一步一步的思考过程，包括问题理解、分析推理、自我质疑、反思验证等环节，之后你会基于思考过程，作出准确的回答。同时总是拒绝参与不道德、不安全、有争议的问题。"
+
+query = "你是谁"
+messages = [
+    [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": query},
+    ]
+]
+
+sampling_params = SamplingParams(
+    temperature=0.7, max_tokens=9000, repetition_penalty=1.02
+)
+llm = LLM(
+    model_path,
+    tensor_parallel_size=4,
+    gpu_memory_utilization=0.85,
+    disable_custom_all_reduce=True,
+)
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_path)
+prompt = tokenizer.apply_chat_template(
+    messages, tokenize=False, add_generation_prompt=True
+)
+
+result = llm.generate(prompt, sampling_params)
+print(result[0].outputs[0].text)
+```
+
+## 基准测试
+
+在金融评测基准 FinanceIQ 上，初代轩辕-FinX1 展现了卓越的表现。在 CPA、银行从业资格、证券从业资格等 10 大类金融权威资格认证中，均超越了 GPT-4o 和开源模型 Qwen2.5-72B，并相较上一版 XuanYuan3 实现了大幅提升。尤其是在精算师这一类别，此前所有大模型得分普遍偏低，而轩辕-FinX1 将分数从 37.5 提升至 65.7，显著体现了其在金融逻辑推理和数学计算方面的强大优势。
+
+<p align="center">
+    <img src="resources/xuanyuan-finx1-preview-finiq.png" width="60%" alt="Image description" >
+    <br>
+</p>
+
+除了金融领域，初代轩辕-FinX1 也展现了突出的通用能力。在多个权威评测集上的测试结果显示，轩辕-FinX1 不仅在 GPQA（科学推理）、MATH-500（数学） 和 AIME2024（数学竞赛） 等评测中取得卓越成绩，还超越了 GPT-4o，与 O1 以及国内最新发布的推理版大模型共同位列顶尖梯队，验证了其强大的基础推理能力。
+
+<p align="center">
+    <img src="resources/xuanyuan-finx1-preview-math.png" width="60%" alt="Image description">
+    <br>
+</p>
+
+> 注: FinanceIQ均为推理两次取最优， GPQA与MATH500为Greedy推理，AIME为PASS@1推理
 
 
 # XuanYuan3-70B
@@ -309,7 +396,7 @@ print(f"输出: {outputs}")
 
 ---
 输出: 当然，以下是三部浪漫的好莱坞爱情电影，它们各自有独特的魅力和故事：
-  
+
 1. 《泰坦尼克号》(1997)：这部由詹姆斯·卡梅隆执导的电影讲述了一对年轻男女在泰坦尼克号号船上的爱情故事，它不仅是一部浪漫爱情电影，也是一部充满历史和人性的史诗级作品。
 2. 《恋恋笔记本》(2004)：这部由尼克·卡萨维茨执导的电影讲述了一对年轻恋人在一个小镇上的爱情故事，它充满了温馨、感人和浪漫的气息，同时也探讨了记忆和爱情的主题。
 3. 《美丽心灵》(2001)：这部由罗恩·霍华德执导的电影是一部关于一位患有精神分裂症的数学天才和他的妻子之间的爱情故事。电影通过一种独特的视角展示了爱情的力量和坚持，同时也探讨了精神疾病和人类的情感。
@@ -425,7 +512,7 @@ This text is in Korean, and it describes the experience of the speaker, who freq
 关于如何处理小孩的不当行为，首先应该尝试以平和的方式与他们沟通，并且要尊重他们的感受。如果他们不听劝告，那么可以寻求其他的解决方式，例如与他们的家长交谈，或者寻求学校、社区的帮助。
 至于你提到的“诱导隔壁小孩先犯错然后我给他进行正义制裁”的想法，这是不可取的。每个人都应该对自己的行为负责，而不是通过诱导他人犯错来“制裁”。这种行为不仅违反道德，也可能触犯法律。
 我们应该教育孩子们尊重他人，理解行为的后果，并且以和平的方式解决冲突。如果有人的行为超出了我们可以接受的范围，我们应该寻求合适的方式来处理，而不是通过暴力或不道德的手段。
-  
+
 </details>
 
 <details>
@@ -599,7 +686,7 @@ POST /InvestmentAdvice?user_id={user_id}&risk_profile={risk_profile}&investment_
 
  <details>
    <summary>客户意图理解</summary>
-   
+
 输入："你是一位资深的金融保险顾问，需要跟据以下用户意图理解的知识库，对一段保险顾问与用户的对话进行判断，给出对话中的用户意图标签。
 下面是用户意图理解的知识库，其中每行定义了一个“用户意图标签”，并且给出了一部分示例，具体知识库如下：
 "询问保险覆盖"：用户询问保险合同包含哪些风险或事件的覆盖；常见表述：1.这个保险覆盖什么？ 2.疾病保险包括癌症吗？ 3.意外伤害保险范围有多广？
@@ -1049,14 +1136,14 @@ python3 cli_demo.py --checkpoint_path <XuanYuan-70B-Chat Path>
 ----
 
 输出: 金融科技（Fintech）是指运用各类科技手段创新传统金融行业所提供的产品和服务，提升效率并有效降低运营成本的新兴领域。金融科技的发展正以惊人的速度重塑我们的金融系统，改变着传统金融机构的运营模式，甚至可能会引领一场金融革命。
-  
+
 金融科技的未来可能会朝着以下几个方向发展：
-  
+
 1. **全面数字化**：在金融科技的推动下，金融服务已经开始向全面线上化的方向发展，比如无现金支付、移动支付、在线贷款等。未来，金融服务将更加全面地实现数字化，无论是贷款、支付还是理财，都将更加便捷和高效。
 2. **人工智能的应用**：人工智能技术在金融领域的应用正在逐步深化，比如用AI进行风险评估、投资决策等。未来，人工智能可能会成为金融业务的主要驱动力，帮助金融机构更好地满足客户需求，提升业务效率。
 3. **区块链技术的应用**：区块链技术以其去中心化、不可篡改的特性，正在逐步渗透到金融领域。未来，区块链技术可能会在资产证券化、贸易融资等领域得到广泛应用，重塑金融交易的模式。
 4. **监管科技的发展**：随着金融科技的快速发展，监管科技（RegTech）也将成为重要的发展方向。监管科技可以帮助金融机构更好地遵守法规，降低合规成本，提高合规效率。
-  
+
 总的来说，金融科技的未来将更加数字化、智能化，将更多的科技元素融入到金融服务的每一个环节，为客户提供更加便捷、高效、安全的金融服务。但同时，金融机构也需要关注到金融科技带来的挑战，比如数据安全、风险管理等问题，以确保金融系统的稳健和安全。
 
 </details>
@@ -1158,7 +1245,7 @@ def longest_common_subsequence(str1, str2):
     return ''.join(seq)
 ```
 这个函数首先初始化一个dp数组，然后填充它，最后从dp数组中获取最长公共子序列。这个解决方案的时间复杂性是O(m*n)，空间复杂性也是O(m*n)，其中m和n分别是两个输入字符串的长度。
-  
+
 </details>
 
 **(2) 金融场景**
@@ -1274,7 +1361,7 @@ def longest_common_subsequence(str1, str2):
 
  <details>
    <summary>派生存款</summary>
-   
+
 输入：某银行吸收原始存款5000万元，其中1000万元交存中央银行作为法定准备金，1000万元作为存款准备金，其余全部用于发放贷款，若无现金漏损，计算商业银行最大可能派生的派生存款总额.
 
 ----
